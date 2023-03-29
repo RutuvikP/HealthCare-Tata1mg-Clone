@@ -20,7 +20,7 @@ import { useState } from 'react';
     const toast=useToast();
 
     const handleSubmit=()=>{
-        if(email=="rutuvikpatil@gmail.com" && password=="admin"){
+        if(email==="rutuvikpatil@gmail.com" && password==="admin"){
             toast({
                 title:"Welcome Admin !!",
                 status:"success",

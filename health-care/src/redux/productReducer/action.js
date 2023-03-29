@@ -8,7 +8,7 @@ import {
 export const getProducts = () => (dispatch) => {
   dispatch({ type: PRODUCT_REQUEST });
   axios
-    .get(`https://poised-red-shrimp.cyclic.app/multivitamins`)
+    .get("https://poised-red-shrimp.cyclic.app/multivitamins")
     .then((res) => {
       dispatch({ type: GET_PRODUCT_SUCCEESS, payload: res.data });
       //console.log(res.data);
