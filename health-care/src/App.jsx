@@ -1,14 +1,19 @@
-import './App.css';
-import { Homelan } from './landingcomponent/PagesMain/Homelan';
-import { Mainroute } from './landingcomponent/PagesMain/Mainroute';
-import WithSubnavigation from './landingcomponent/PagesMain/Navbar';
+
+
+
+
+import "./App.css";
+import ProductList from "./Pages/ProductList";
+
 
 function App() {
   return (
     <div className="App">
-      <WithSubnavigation />
+
+
      
-      <Mainroute/>
+      <ProductList />
+
     </div>
   );
 }
