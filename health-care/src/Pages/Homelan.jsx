@@ -8,7 +8,7 @@ import "./Homelan.css";
 
 export const Homelan = () => {
   return (
-    <div>
+    <div style={{ backgroundColor: "rgb(236, 236, 236)" }}>
       <Banner />
       <section className="style__pharmaHeader___1hcdG">
         <h1>
@@ -54,7 +54,7 @@ export const Homelan = () => {
       </div>
       <HomeCarosal />
       <Footer1 />
-      <Footer2/>
+      <Footer2 />
     </div>
   );
 };

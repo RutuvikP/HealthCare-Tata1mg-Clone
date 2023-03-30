@@ -4,9 +4,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid #e0e0e0;
+    border: 2px solid white;
     border-width: 2px 0;
 }
+
 .style__pharmaHeader___1hcdG h1 {
     margin: 26px 0;
     font-size: 22px;
