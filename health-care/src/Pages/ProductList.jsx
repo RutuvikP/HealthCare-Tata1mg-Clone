@@ -27,7 +27,7 @@ function ProductList() {
     dispatch(getProducts(obj));
   }, [location.search]);
   //console.log(searchParams.getAll("brand"));
-
+  console.log(products);
   //console.log(products);
   return (
     <Flex>
