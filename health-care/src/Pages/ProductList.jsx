@@ -26,7 +26,7 @@ function ProductList() {
   useEffect(() => {
     dispatch(getProducts(obj));
   }, [location.search]);
-  //console.log(searchParams.getAll("brand"));
+  console.log(searchParams.getAll("brand"));
   console.log(products);
   //console.log(products);
   return (
