@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "../redux/productReducer/action";
 import ProductItem from "./ProductItem";
-import { Box, Flex, SimpleGrid, Text } from "@chakra-ui/react";
+import { Box, Center, Flex, SimpleGrid, Text } from "@chakra-ui/react";
 import Sidebar from "./Sidebar";
 import { useLocation, useSearchParams } from "react-router-dom";
 import { Dna } from "react-loader-spinner";
@@ -20,6 +20,7 @@ function ProductList() {
       brand: searchParams.getAll("brand"),
       _sort: "price",
       _order: searchParams.get("order"),
+      _page: searchParams.get("page"),
     },
   };
 
@@ -30,22 +31,31 @@ function ProductList() {
   console.log(products);
   //console.log(products);
   return (
-    <Flex>
-      <Box pl={10} mt={20}>
+    <Flex
+      justifyContent={"center"}
+      flexDirection={{ lg: "row", md: "row", sm: "column", base: "column" }}
+    >
+      <Box
+        //border={"1px solid red"}
+        //margin={{ lg: "none", md: "none", base: "auto", sm: "auto" }}
+        mt={28}
+      >
         <Sidebar />
       </Box>
 
-      <Box>
+      <Box width={"auto"}>
         <Text fontSize="2xl">Multivitamins</Text>
         {isLoading ? (
-          <Dna
-            visible={true}
-            height="80"
-            width="80"
-            ariaLabel="dna-loading"
-            wrapperStyle={{}}
-            wrapperClass="dna-wrapper"
-          />
+          <Center marginTop={"200px"}>
+            <Dna
+              visible={true}
+              height="200"
+              width="200"
+              ariaLabel="dna-loading"
+              wrapperStyle={{}}
+              wrapperClass="dna-wrapper"
+            />
+          </Center>
         ) : (
           <SimpleGrid columns={[1, 2, 3, 4]} spacing={10} margin={10}>
             {products.map((el, i) => {

@@ -8,6 +8,7 @@ const initialState = {
   isLoading: false,
   isError: false,
   products: [],
+  total: 0,
 };
 
 export const reducer = (state = initialState, { type, payload }) => {
@@ -15,7 +16,12 @@ export const reducer = (state = initialState, { type, payload }) => {
     case PRODUCT_REQUEST:
       return { ...state, isLoading: true };
     case GET_PRODUCT_SUCCEESS:
-      return { ...state, isLoading: false, products: payload };
+      return {
+        ...state,
+        isLoading: false,
+        products: payload.data,
+        total: payload.total,
+      };
     case PRODUCT_FAILURE:
       return { ...state, isError: true };
     default:

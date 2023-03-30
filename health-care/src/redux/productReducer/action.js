@@ -8,9 +8,16 @@ import {
 export const getProducts = (paramObj) => (dispatch) => {
   dispatch({ type: PRODUCT_REQUEST });
   axios
-    .get("https://poised-red-shrimp.cyclic.app/multivitamins", paramObj)
+    .get(
+      `https://poised-red-shrimp.cyclic.app/multivitamins?_limit=8`,
+      paramObj
+    )
     .then((res) => {
-      dispatch({ type: GET_PRODUCT_SUCCEESS, payload: res.data });
+      let obj = {
+        data: res.data,
+        total: res.headers.get("x-total-count"),
+      };
+      dispatch({ type: GET_PRODUCT_SUCCEESS, payload: obj });
       //console.log(res.data);
     })
     .catch((err) => {
