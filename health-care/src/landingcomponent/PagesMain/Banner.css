@@ -44,3 +44,63 @@
     /* background-color: #3e8e41; */
     color: red;
 }
+.sliderresponsivert{
+    width: 100%;
+     display: flex
+}
+.firstdivslide{
+    width: 70%;
+   
+}
+.firstdivslide img {
+    width:100%;
+    height:100%;
+}
+.lastimgres{
+    height: 185px;
+}
+.lastimgres>img{
+    width: 100%;
+    height: 100%;
+}
+@media screen and (max-width: 1000px){
+   
+
+
+.sliderresponsivert {
+    height: auto;
+   display: block;
+    width: auto;
+}
+.firstdivslide {
+    width: 100%;
+}
+.lastimgres {
+    width: 100%;
+    height:110px;
+
+}
+
+
+}
+
+@media screen and (max-width: 1200px) {
+
+.lastimgres {
+        /* width: 100%; */
+        height: 159px;
+
+    }
+
+}
+
+@media screen and (max-width: 1250px) {
+
+.lastimgres {
+        /* width: 100%; */
+        height:179px;
+
+    }
+
+
+}

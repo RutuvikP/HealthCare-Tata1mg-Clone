@@ -1,0 +1,140 @@
+.style__slider-wrapper___ZbZBQ {
+    display: inline-block;
+    width: 100%;
+    background: #fff;
+    margin-top: 10px;
+    box-shadow: 0 0 7px 0 rgba(0, 0, 0, .14);
+    min-height: 150px;
+}
+.style__container___zxrbi {
+    margin-left: auto;
+    margin-right: auto;
+}
+/* .slick-prev.slick-disabled {
+    display: none;
+}
+.slick-prev.slick-disabled {
+    display: none;
+} */
+.SliderPrevButtonRevamp__previous-arrow-round___1GYHv {
+    height: 50px;
+    width: 50px;
+}
+.slick-prev {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    
+    padding: 0;
+   
+    
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: 1px;
+    /* box-shadow: #212121; */
+    background: 0 0;
+}
+
+.slick-list {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.slick-list {
+    position: relative;
+    display: block;
+}
+/* .slick-track {
+    position: relative;
+    left: 0;
+    top: 0;
+    display: block;
+} */
+/* .slick-track:before {
+    content: "";
+    display: table;
+} */
+
+
+.slick-initialized .slick-slide {
+    display: block;
+}
+.slick-slide {
+    /* float: left; */
+    height: 100%;
+    /* min-height: 1px; */
+    /* display: none; */
+}
+.style__container___39fE1 {
+    display: grid;
+    width: 175px;
+    margin: 0 5px;
+    text-align: center;
+}
+.style__image-container___2G57P {
+    display: block;
+    max-width: 120px;
+    height: 120px;
+    margin: 10px auto;
+    position: relative;
+}
+.style__image___Ny-Sa.style__loaded___22epL {
+    opacity: 1;
+    transform: scale(1);
+    transition: all .3s ease-in-out;
+}
+.style__image-container___2G57P img {
+    height: 120px;
+    margin: auto;
+    display: block;
+}
+img {
+    max-width: 100%;
+    vertical-align: middle;
+    border: 0;
+}
+
+.style__card-head-name___3UuUt {
+    display: -webkit-inline-box;
+    color: #212121;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    /* font-size: 12px; */
+}
+
+.slice-hover:hover{
+    box-shadow: 0 0 7px 0 rgba(1, 1, 1, .14);
+    border: 2;
+    border-radius: 10%;
+}
+
+
+@media screen and (max-width:1000px){
+.slick-track {
+width:500px;
+        opacity:2;
+        transform: translate3d(0px, 0px, 0px);
+}
+}
+
+
+
+
+@media screen and (min-width: 768px) {
+    .style__container-padding___3jTBd{
+max-width: 1280px;
+    margin: 0 auto;
+    width: 94%;
+    }
+         .style__card-head-name___3UuUt {
+font-size: 14px;
+    height: 45px;
+
+         }
+}

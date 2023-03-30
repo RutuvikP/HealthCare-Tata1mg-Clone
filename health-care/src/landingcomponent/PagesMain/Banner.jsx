@@ -52,17 +52,17 @@ const Banner = () => {
       items: 1,
     },
     tablet: {
-      breakpoint: { max: 1024, min: 464 },
+      breakpoint: { max: 3000, min: 1024 },
       items: 1,
     },
     mobile: {
-      breakpoint: { max: 464, min: 0 },
+      breakpoint: { max: 1024, min: 600},
       items: 1,
     },
   };
     return (
       <div>
-        <div class="dropdown">
+        <div className="dropdown">
           <div
             
             className="dropbtn"
@@ -109,8 +109,8 @@ const Banner = () => {
             </a>
           </div>
         </div>
-        <div style={{ width: "100%", display: "flex" }}>
-          <div style={{ width: "70%" }}>
+        <div  className="sliderresponsivert">
+          <div className="firstdivslide">
             <Carousel
               responsive={responsive}
               swipeable={false}
@@ -129,10 +129,10 @@ const Banner = () => {
               ))}
             </Carousel>
           </div>
-          <div>
+          <div className="lastimgres">
             <img
               src="https://onemg.gumlet.io/a_ignore,w_480,h_200,c_fit,q_auto,f_auto/421855e3-ec1c-42c9-a5b4-d5153c8f2f54.png"
-              style={{ height: "185px" }}
+              
               alt=""
             />
           </div>
