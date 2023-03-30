@@ -6,7 +6,7 @@ import ProductItem from "./ProductItem";
 import { Box, Flex, SimpleGrid, Text } from "@chakra-ui/react";
 import Sidebar from "./Sidebar";
 import { useLocation, useSearchParams } from "react-router-dom";
-import { Dna, Radio } from "react-loader-spinner";
+import { Dna } from "react-loader-spinner";
 
 function ProductList() {
   const [searchParams] = useSearchParams();
