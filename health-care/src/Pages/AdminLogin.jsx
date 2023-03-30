@@ -12,11 +12,13 @@ import {
     useToast
   } from '@chakra-ui/react';
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
   
   export default function AdminLogin() {
     const [email,setEmail]=useState("");
     const [password,setPassword]=useState("");
-
+    const navigate=useNavigate();
     const toast=useToast();
 
     const handleSubmit=()=>{
@@ -30,6 +32,7 @@ import { useState } from 'react';
             })
             setEmail("")
             setPassword("")
+            navigate('/adminproductlist')
         }else{
             toast({
                 title:"Wrong Credentials !!",
