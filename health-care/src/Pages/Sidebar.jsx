@@ -1,17 +1,47 @@
+//Sidebar.jsx
 import {
   Box,
   Checkbox,
-  Divider,
   Input,
   Radio,
   RadioGroup,
-  Select,
   Stack,
   Text,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 
 function Sidebar() {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const initialBrand = searchParams.getAll("brand");
+  //console.log(initialBrand);
+  const [brand, setBrand] = useState(initialBrand || []);
+  const [order, setOrder] = useState("");
+
+  const handleChange = (e) => {
+    let newBrand = [...brand];
+    const val = e.target.value;
+    if (newBrand.includes(val)) {
+      newBrand = newBrand.filter((el) => el !== val);
+    } else {
+      newBrand.push(val);
+    }
+    setBrand(newBrand);
+  };
+
+  const handleSort = (e) => {
+    //console.log(e);
+    setOrder(e);
+  };
+  useEffect(() => {
+    const params = {
+      brand,
+    };
+    order && (params.order = order);
+    //params.sort?
+    setSearchParams(params);
+  }, [brand, order]);
+
   return (
     <Box
       w={"170px"}
@@ -25,51 +55,102 @@ function Sidebar() {
           <b>Filter by brand</b>
         </Text>
         <Input placeholder="search" mb={3} />
-        <Checkbox name="tata" id="">
+        <Checkbox
+          value="Tata"
+          onChange={handleChange}
+          isChecked={brand.includes("Tata")}
+        >
           Tata
         </Checkbox>
         <br />
-        <Checkbox name="revital" id="">
+        <Checkbox
+          value="Revital"
+          onChange={handleChange}
+          isChecked={brand.includes("Revital")}
+        >
           Revital
         </Checkbox>
         <br />
-        <Checkbox name="vicks" id="">
+        <Checkbox
+          value="Vicks"
+          onChange={handleChange}
+          isChecked={brand.includes("Vicks")}
+        >
           Vicks
         </Checkbox>
         <br />
-        <Checkbox name="wellman" id="">
+        <Checkbox
+          value="Wellman"
+          onChange={handleChange}
+          isChecked={brand.includes("Wellman")}
+        >
           Wellman
         </Checkbox>
         <br />
-        <Checkbox name="healthkart" id="">
+        <Checkbox
+          value="Healthkart"
+          onChange={handleChange}
+          isChecked={brand.includes("Healthkart")}
+        >
           Healthkart
         </Checkbox>
         <br />
-        <Checkbox name="wellbeing" id="">
+        <Checkbox
+          value="Wellbeing"
+          onChange={handleChange}
+          isChecked={brand.includes("Wellbeing")}
+        >
           Wellbeing
         </Checkbox>
         <br />
-        <Checkbox name="muscleblaze" id="">
+        <Checkbox
+          value="Muscleblaze"
+          onChange={handleChange}
+          isChecked={brand.includes("Muscleblaze")}
+        >
           Muscleblaze
         </Checkbox>
         <br />
-        <Checkbox name="carbamide" id="">
+        <Checkbox
+          value="Carbamide Forte"
+          onChange={handleChange}
+          isChecked={brand.includes("Carbamide Forte")}
+        >
           Carbamide Forte
         </Checkbox>
         <br />
-        <Checkbox name="zincovit" id="">
+        <Checkbox
+          value="Zincovit"
+          onChange={handleChange}
+          isChecked={brand.includes("Zincovit")}
+        >
           Zincovit
         </Checkbox>
         <br />
-        <Checkbox name="supryadyn" id="">
+        <Checkbox
+          value="Supryadyn"
+          id=""
+          onChange={handleChange}
+          isChecked={brand.includes()}
+        >
           Supradyn
         </Checkbox>
         <br />
-        <Checkbox name="a-to-z" id="">
+        <Checkbox
+          value="A to Z"
+          id=""
+          onChange={handleChange}
+          isChecked={brand.includes()}
+        >
           A to Z
         </Checkbox>
         <br />
-        <Checkbox name="zeroharm" id="">
+        <Checkbox
+          value="Zeroharm"
+          id=""
+          onChange={handleChange}
+          isChecked={brand.includes()}
+        >
           Zeroharm
         </Checkbox>
       </Box>
@@ -78,7 +159,7 @@ function Sidebar() {
         <Text mb={3}>
           <b> Sort by Price</b>
         </Text>
-        <RadioGroup>
+        <RadioGroup onChange={handleSort}>
           <Stack>
             <Radio value="desc">High to Low</Radio>
             <Radio value="asc">Low to High</Radio>
