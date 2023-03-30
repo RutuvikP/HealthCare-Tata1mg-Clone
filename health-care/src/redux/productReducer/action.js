@@ -5,10 +5,10 @@ import {
   PRODUCT_REQUEST,
 } from "./actionTypes";
 
-export const getProducts = () => (dispatch) => {
+export const getProducts = (paramObj) => (dispatch) => {
   dispatch({ type: PRODUCT_REQUEST });
   axios
-    .get("https://poised-red-shrimp.cyclic.app/multivitamins")
+    .get("https://poised-red-shrimp.cyclic.app/multivitamins", paramObj)
     .then((res) => {
       dispatch({ type: GET_PRODUCT_SUCCEESS, payload: res.data });
       //console.log(res.data);

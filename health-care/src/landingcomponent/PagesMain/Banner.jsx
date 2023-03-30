@@ -1,8 +1,8 @@
 // import { styled } from "@mui/material";
 // import { Flex } from "@chakra-ui/react";
-import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import "./Banner.css"
+import Carousel from "react-multi-carousel";
+import "./Banner.css";
 
 // const Image = styled("img")(({ theme }) => ({
 //   width: "100%",
@@ -60,85 +60,75 @@ const Banner = () => {
       items: 1,
     },
   };
-    return (
-      <div>
-        <div class="dropdown">
-          <div
-            
-            className="dropbtn"
-          >
-            <a
-             
-              href=" "
-             
-            >
-              <span >
-                Covid Essentials
-              </span>
-            </a>
-            <i class="fa fa-angle-down drop-icon"></i>
-          </div>{" "}
-        
-          <div class="dropdown-content">
-            <a href=" ">
-              <span>Covid-19 Self test kits</span>
-            </a>
+  return (
+    <div>
+      <div class="dropdown">
+        <div className="dropbtn">
+          <a href=" ">
+            <span>Covid Essentials</span>
+          </a>
+          <i class="fa fa-angle-down drop-icon"></i>
+        </div>{" "}
+        <div class="dropdown-content">
+          <a href=" ">
+            <span>Covid-19 Self test kits</span>
+          </a>
 
-            <a href=" ">
-              <span>Oxygen Cans &amp; Concentrators</span>
-            </a>
+          <a href=" ">
+            <span>Oxygen Cans &amp; Concentrators</span>
+          </a>
 
-            <a href=" ">
-              <span>Masks</span>
-            </a>
+          <a href=" ">
+            <span>Masks</span>
+          </a>
 
-            <a href=" ">
-              <span>Sanitizers &amp; Handwash Products</span>
-            </a>
+          <a href=" ">
+            <span>Sanitizers &amp; Handwash Products</span>
+          </a>
 
-            <a href=" ">
-              <span>Support Your Immunity</span>
-            </a>
+          <a href=" ">
+            <span>Support Your Immunity</span>
+          </a>
 
-            <a href=" ">
-              <span>Thermometer</span>
-            </a>
+          <a href=" ">
+            <span>Thermometer</span>
+          </a>
 
-            <a href=" ">
-              <span>Chyawanprash</span>
-            </a>
-          </div>
-        </div>
-        <div style={{ width: "100%", display: "flex" }}>
-          <div style={{ width: "70%" }}>
-            <Carousel
-              responsive={responsive}
-              swipeable={false}
-              draggable={false}
-              infinite={true}
-              autoPlay={true}
-              autoPlaySpeed={3000}
-              keyBoardControl={true}
-              slidesToSlide={1}
-              dotListClass="custom-dot-list-style"
-              itemClass="carousel-item-padding-10-px"
-              containerClass="carousel-container"
-            >
-              {bannerData1.map((data, id) => (
-                <img src={data.url} alt="banner" key={id} />
-              ))}
-            </Carousel>
-          </div>
-          <div>
-            <img
-              src="https://onemg.gumlet.io/a_ignore,w_480,h_200,c_fit,q_auto,f_auto/421855e3-ec1c-42c9-a5b4-d5153c8f2f54.png"
-              style={{ height: "185px" }}
-              alt=""
-            />
-          </div>
+          <a href=" ">
+            <span>Chyawanprash</span>
+          </a>
         </div>
       </div>
-    );
+      <div style={{ width: "100%", display: "flex" }}>
+        <div style={{ width: "70%" }}>
+          <Carousel
+            responsive={responsive}
+            swipeable={false}
+            draggable={false}
+            infinite={true}
+            autoPlay={true}
+            autoPlaySpeed={3000}
+            keyBoardControl={true}
+            slidesToSlide={1}
+            dotListClass="custom-dot-list-style"
+            itemClass="carousel-item-padding-10-px"
+            containerClass="carousel-container"
+          >
+            {bannerData1.map((data, id) => (
+              <img src={data.url} alt="banner" key={id} />
+            ))}
+          </Carousel>
+        </div>
+        <div>
+          <img
+            src="https://onemg.gumlet.io/a_ignore,w_480,h_200,c_fit,q_auto,f_auto/421855e3-ec1c-42c9-a5b4-d5153c8f2f54.png"
+            style={{ height: "185px" }}
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Banner;
