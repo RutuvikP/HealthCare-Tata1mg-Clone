@@ -31,7 +31,7 @@ import { useNavigate } from 'react-router-dom';
             })
             setEmail("")
             setPassword("")
-            // navigate('/adminproductlist')
+            navigate('/admindashboard')
         }else{
             toast({
                 title:"Wrong Credentials !!",

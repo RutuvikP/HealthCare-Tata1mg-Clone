@@ -297,6 +297,6 @@ const NAV_ITEMS = [
   },
   {
     label: "Admin",
-    href: "/admin",
+    href: "/adminlogin",
   },
 ];

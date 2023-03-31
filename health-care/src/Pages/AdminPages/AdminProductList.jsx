@@ -1,14 +1,18 @@
-import { Table, TableContainer, Tbody, Th, Thead, Tr, Td, Center, Spinner, useToast } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
+
+import { Table, TableContainer, Tbody, Th, Thead, Tr, Td, Text, Center, Spinner, useToast} from "@chakra-ui/react";
+import { useEffect, useState  } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteProduct, getProductAdmin } from "../../redux/adminReducer/action";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import AdminNav from "../../Components/AdminComponents/AdminNav";
 
 export const AdminProductList = () => {
 
     const { products, isLoading } = useSelector((store) => store.adminReducer)
+    const location = useLocation();
     // console.log(products, isLoading);
     const toast=useToast();
+
 
     const dispatch = useDispatch();
 
@@ -46,7 +50,10 @@ export const AdminProductList = () => {
         />
     } else {
         return (
-            <TableContainer>
+            <>
+            <AdminNav/>
+            {location.pathname === "/addproduct" ? "" : <Text fontWeight={'bold'} fontSize={'1rem'}>Product List</Text>}
+            <TableContainer marginLeft={'18%'}>
                 <Table size={'sm'} variant='striped' m={'auto'} w={'80%'}>
                     <Thead>
                         <Tr>
@@ -63,7 +70,7 @@ export const AdminProductList = () => {
                             products && products.map((el) => (
                                 <Tr key={el.id}>
                                     <Td>{el.id}</Td>
-                                    <Td>{el.title}</Td>
+                                    <Td>{el.title.slice(0,100)}</Td>
                                     <Td>{el.brand}</Td>
                                     <Td>{el.price}</Td>
                                     <Td color={'blue'} _hover={{ cursor: 'pointer' }}><Link to={`/edit/${el.id}`}>Edit</Link></Td>
@@ -74,6 +81,7 @@ export const AdminProductList = () => {
                     </Tbody>
                 </Table>
             </TableContainer>
+            </>
         )
     }
 };

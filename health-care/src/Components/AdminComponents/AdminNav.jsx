@@ -31,8 +31,8 @@ import {RiLogoutCircleFill} from 'react-icons/ri';
 
 const LinkItems= [
   { name: 'Home', icon: AiFillHome, path:'/admin_dashboard'},
-  { name: 'Add Product', icon: HiFolderAdd, path:'/admin_addproduct' },
-  { name: 'Multivitamins', icon: GiMedicines, path: '/multivitamins'},
+  { name: 'Add Product', icon: HiFolderAdd, path:'/addproduct' },
+  { name: 'Multivitamins', icon: GiMedicines, path: '/adminproductlist'},
   { name: 'Users', icon: FaUsers, path:'/admin_users' },
   { name: 'Logout', icon: RiLogoutCircleFill, path:'/' }
 ];
@@ -182,7 +182,7 @@ const MobileNav = ({ onOpen, ...rest }) => {
                   alignItems="flex-start"
                   spacing="1px"
                   ml="2">
-                  <Text fontSize="sm">Manoj</Text>
+                  <Text fontSize="sm">Rutuvik</Text>
                   <Text fontSize="xs" color="gray.600">
                     Admin
                   </Text>
