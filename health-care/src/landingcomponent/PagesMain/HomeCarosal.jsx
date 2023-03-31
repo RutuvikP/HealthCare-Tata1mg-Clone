@@ -14,18 +14,18 @@ import "./Homecarosal.css"
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
-    items:5,
-    paritialVisibilityGutter: 60,
+    items:6,
+    paritialVisibilityGutter:35,
   },
   tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 4,
-    paritialVisibilityGutter: 50,
+    breakpoint: { max: 1024, min:600},
+    items:4.5,
+    paritialVisibilityGutter:12,
   },
   mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 3,
-    paritialVisibilityGutter: 30,
+    breakpoint: { max:600, min: 0 },
+    items:3,
+    paritialVisibilityGutter:10,
   },
 };
 
@@ -35,7 +35,7 @@ const responsive = {
 const HomeCarosal = ({ deviceType }) => {
   return (
     <div>
-      <div className="homecarosal_maindiv">
+      <div  className="mnbvcdfghyu">
         <Carousel
           ssr
           partialVisbile
@@ -114,7 +114,7 @@ const HomeCarosal = ({ deviceType }) => {
         </span>
       </div>
 
-      <div>
+      <div className="mnbvcdfghyu">
         <Carousel
           ssr
           partialVisbile
@@ -191,7 +191,7 @@ const HomeCarosal = ({ deviceType }) => {
           </a>
         </span>
       </div>
-      <div>
+      <div className="mnbvcdfghyu">
         <Carousel
           ssr
           partialVisbile
@@ -300,7 +300,7 @@ const HomeCarosal = ({ deviceType }) => {
           </a>
         </span>
       </div>
-      <div>
+      <div className="mnbvcdfghyu">
         <Carousel
           ssr
           partialVisbile
@@ -378,7 +378,7 @@ const HomeCarosal = ({ deviceType }) => {
           </a>
         </span>
       </div>
-      <div>
+      <div className="mnbvcdfghyu">
         <Carousel
           ssr
           partialVisbile
@@ -458,7 +458,7 @@ const HomeCarosal = ({ deviceType }) => {
           </a>
         </span>
       </div>
-      <div>
+      <div className="mnbvcdfghyu">
         <Carousel
           ssr
           partialVisbile

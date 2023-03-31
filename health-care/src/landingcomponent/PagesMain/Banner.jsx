@@ -65,13 +65,8 @@ const Banner = () => {
         <div className="dropdown">
           <div
             
-            className="dropbtn"
-          >
-            <a
-             
-              href=" "
-             
-            >
+            className="dropbtn">
+            <a href=" ">
               <span >
                 Covid Essentials
               </span>
