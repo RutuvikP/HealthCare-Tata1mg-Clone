@@ -37,7 +37,7 @@ function ProductList() {
     >
       <Box
         //border={"1px solid red"}
-        //margin={{ lg: "none", md: "none", base: "auto", sm: "auto" }}
+        // margin={{ lg: "none", md: "none", sm: "auto", base: "auto" }}
         mt={28}
       >
         <Sidebar />
