@@ -27,24 +27,27 @@ function ProductList() {
   useEffect(() => {
     dispatch(getProducts(obj));
   }, [location.search]);
-  console.log(searchParams.getAll("brand"));
-  console.log(products);
+  //console.log(searchParams.getAll("brand"));
+  //console.log(products);
   //console.log(products);
   return (
     <Flex
       justifyContent={"center"}
       flexDirection={{ lg: "row", md: "row", sm: "column", base: "column" }}
+      maxWidth={"80%"}
+      margin="auto"
     >
       <Box
-        //border={"1px solid red"}
+        justifyContent={"center"}
+        // border={"1px solid red"}
         // margin={{ lg: "none", md: "none", sm: "auto", base: "auto" }}
-        mt={28}
+        mt={{ md: "130px", lg: "130px", sm: "none", base: "none" }}
       >
         <Sidebar />
       </Box>
 
       <Box width={"auto"}>
-        <Text fontSize="2xl">Multivitamins</Text>
+        <Text fontSize="4xl">Multivitamins</Text>
         {isLoading ? (
           <Center marginTop={"200px"}>
             <Dna
@@ -57,7 +60,7 @@ function ProductList() {
             />
           </Center>
         ) : (
-          <SimpleGrid columns={[1, 2, 3, 4]} spacing={10} margin={10}>
+          <SimpleGrid columns={[1, 2, 2, 4]} spacing={10} margin={10}>
             {products.map((el, i) => {
               return <ProductItem key={i} {...el} />;
             })}
