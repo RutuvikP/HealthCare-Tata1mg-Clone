@@ -6,3 +6,6 @@ export const ADMIN_PRODUCT_SUCCESS="ADMIN_PRODUCT_SUCCESS";
 
 // Patch req for admin
 export const ADMIN_EDIT_PRODUCT_SUCCESS="ADMIN_EDIT_PRODUCT_SUCCESS";
+
+// Post request for admin
+export const ADMIN_POST_PRODUCT_SUCCESS="ADMIN_EDIT_PRODUCT_SUCCESS";

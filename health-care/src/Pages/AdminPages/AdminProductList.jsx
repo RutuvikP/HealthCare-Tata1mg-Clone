@@ -1,11 +1,13 @@
-import { Table, TableContainer, Tbody, Th, Thead, Tr, Td } from "@chakra-ui/react";
+import { Table, TableContainer, Tbody, Th, Thead, Tr, Td, Text} from "@chakra-ui/react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getProductAdmin } from "../../redux/adminReducer/action";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import AdminNav from "../../Components/AdminComponents/AdminNav";
+
 
 export const AdminProductList=()=>{
-
+    const location = useLocation();
     const products=useSelector((store)=>store.adminReducer.products)
     // console.log(products);
 
@@ -14,7 +16,10 @@ export const AdminProductList=()=>{
         dispatch(getProductAdmin)
     },[])
     return(
-        <TableContainer>
+        <>
+        <AdminNav/>
+        {location.pathname === "/addproduct" ? "" : <Text fontWeight={'bold'} fontSize={'1rem'}>Product List</Text>}
+        <TableContainer marginLeft={'18%'}>
             <Table size={'sm'} variant='striped' m={'auto'} w={'80%'}>
                 <Thead>
                     <Tr>
@@ -31,7 +36,7 @@ export const AdminProductList=()=>{
                         products && products.map((el)=>(
                             <Tr key={el.id}>
                                 <Td>{el.id}</Td>
-                                <Td>{el.title}</Td>
+                                <Td>{el.title.slice(0,100)}</Td>
                                 <Td>{el.brand}</Td>
                                 <Td>{el.price}</Td>
                                 <Td color={'blue'} _hover={{cursor:'pointer'}}><Link to={`/edit/${el.id}`}>Edit</Link></Td>
@@ -42,5 +47,6 @@ export const AdminProductList=()=>{
                 </Tbody>
             </Table>
         </TableContainer>
+        </>
     )
 };
