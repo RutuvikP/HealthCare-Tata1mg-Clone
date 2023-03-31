@@ -65,10 +65,9 @@ function Sidebar() {
     <Box
       w={"210px"}
       p={5}
-      boxShadow={
-        " rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px"
-      }
+      boxShadow=" rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset"
       gap={3}
+      m={"auto"}
     >
       <Box borderBottom={"1px solid grey"} textAlign={"left"}>
         <Text>

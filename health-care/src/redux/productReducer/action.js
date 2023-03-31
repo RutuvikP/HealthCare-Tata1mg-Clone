@@ -1,5 +1,6 @@
 import axios from "axios";
 import {
+  ADD_PRODUCT_CART_SUCCESS,
   GET_PRODUCT_SUCCEESS,
   PRODUCT_FAILURE,
   PRODUCT_REQUEST,
@@ -25,3 +26,14 @@ export const getProducts = (paramObj) => (dispatch) => {
       console.log(err);
     });
 };
+
+// export const addToCart = (old) => (dispatch) => {
+//   const newObj = { ...old, ["quantity"]: 1 };
+//   dispatch({ type: PRODUCT_REQUEST });
+//   axios
+//     .post(`https://poised-red-shrimp.cyclic.app/cart`, newObj)
+//     .then((res) =>{
+//       dispatch({ type: ADD_PRODUCT_CART_SUCCESS });
+//     console.log(res)})
+//     .catch((err) => console.log(err));
+// };
