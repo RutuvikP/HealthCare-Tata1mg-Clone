@@ -1,5 +1,5 @@
 import React from "react";
-import "./Footer.css";
+import  "./Footer.css";
 export const Footer2 = () => {
   return (
     <div>
@@ -256,7 +256,9 @@ export const Footer2 = () => {
               <ul>
                 <li>
                   <a href=" ">
-                    <div className="google_play style__m12___25Let"></div>
+                    <div className="google_play style__m12___25Let">
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbcE5M9HdfW4eEdcoUypdO7zr2iyb8pmYMOA&usqp=CAU" alt=" " style={{width:"200px"}}/>
+                    </div>
                   </a>
                 </li>
                 <li>
@@ -415,7 +417,9 @@ export const Footer2 = () => {
               process requests for Schedule X and other habit forming drugs.
             </div>
           </div>
-          <div className="payment"></div>
+          <div className="payment">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxHJJTdRCf3REVVx7AP2DAkc5K7rbQ5mahRA&usqp=CAU" alt="" style={{width:"150px"}}/>
+          </div>
         </div>
       </div>
     </div>

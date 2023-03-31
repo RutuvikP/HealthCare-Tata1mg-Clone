@@ -1,5 +1,5 @@
 import React from 'react'
-import "./Footer.css"
+import  "./Footer.css"
 export const Footer1 = () => {
   return (
       <div className='margintopppk'>
