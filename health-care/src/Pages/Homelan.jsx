@@ -1,6 +1,6 @@
 import React from "react";
 import { Footer1 } from "../landingcomponent/Footer1";
-import { Footer2 } from "../landingcomponent/Footer2";
+// import { Footer2 } from "../landingcomponent/Footer2";
 import Banner from "../landingcomponent/PagesMain/Banner";
 import HomeCarosal from "../landingcomponent/PagesMain/HomeCarosal";
 // import SimpleSlider from './Slider'
@@ -55,7 +55,7 @@ export const Homelan = () => {
       </div>
       <HomeCarosal />
       <Footer1 />
-      <Footer2 />
+     
     </div>
   );
 };
