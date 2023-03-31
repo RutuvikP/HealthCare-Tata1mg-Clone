@@ -24,4 +24,14 @@ export const editProduct=(obj,id)=>(dispatch)=>{
         // console.log(err);
         dispatch({type:ADMIN_PRODUCT_FAILURE})
     })
+};
+
+export const deleteProduct=(id)=>{
+    return axios.delete(`https://poised-red-shrimp.cyclic.app/multivitamins/${id}`)
+    .then((res)=>{
+        console.log(res);
+    })
+    .catch((err)=>{
+        console.log(err);
+    })
 }
