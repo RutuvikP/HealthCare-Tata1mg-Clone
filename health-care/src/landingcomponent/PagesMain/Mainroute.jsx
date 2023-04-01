@@ -10,9 +10,10 @@ import SingleProductPage from "../../Pages/SingleProductPage";
 
 import AdminDashboardPage from "../../Pages/AdminPages/AdminDashboardPage";
 import AddProductPage from "../../Pages/AdminPages/AddProductPage"
-import Cart from "../../Pages/Cart";
+import {Cart} from "../../Pages/Cart";
 import Checkout from "../../Pages/Checkout";
-
+import { Login } from "../Login";
+import { Protect } from "./authfolderrr/Protect";
 
 export const Mainroute = () => {
   return (
@@ -20,32 +21,30 @@ export const Mainroute = () => {
       <Routes>
         <Route path="/" element={<Homelan />}></Route>
         <Route path="/productlist" element={<ProductList />}></Route>
-
         <Route path="/product/:id" element={<SingleProductPage />}></Route>
         <Route path="/admin" element={<AdminLogin />}></Route>
         <Route path="/adminproductlist" element={<AdminProductList />}></Route>
         <Route path="/edit/:id" element={<AdminEditProduct />}></Route>
-       
-       
-        
-
-        <Route path="/adminlogin" element={<AdminLogin/>}></Route>
-        <Route path="/admindashboard" element={<AdminDashboardPage/>}></Route>
-        <Route path="/adminproductlist" element={<AdminProductList/>}></Route>
-        <Route path="/addproduct" element={<AddProductPage/>}></Route>
-        <Route path="/edit/:id" element={<AdminEditProduct/>}></Route>
-
-        <Route path="/cart" element={<Cart/>}></Route>
-        <Route path='/checkout/payment-information' element={<Checkout/>}></Route>
+        <Route path="/adminlogin" element={<AdminLogin />}></Route>
+        <Route path="/admindashboard" element={<AdminDashboardPage />}></Route>
+        <Route path="/adminproductlist" element={<AdminProductList />}></Route>
+        <Route path="/addproduct" element={<AddProductPage />}></Route>
+        <Route path="/edit/:id" element={<AdminEditProduct />}></Route>
+        <Route path="/login" element={<Login/>}></Route>
+        <Route
+          path="/cart"
+          element={
+            <Protect>
+              <Cart />
+            </Protect>
+          }
+        ></Route>
+        ;
+        <Route
+          path="/checkout/payment-information"
+          element={<Checkout />}
+        ></Route>
       </Routes>
     </div>
   );
 };
-// <Route
-//   path="/cart"
-//   element={
-//     <Protect>
-//       <Cart />
-//     </Protect>
-//   }
-// ></Route>;

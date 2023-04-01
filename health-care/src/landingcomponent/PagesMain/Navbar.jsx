@@ -17,6 +17,7 @@ import {
   useDisclosure,
   Badge,
 } from '@chakra-ui/react';
+import {  Spacer } from "@chakra-ui/react";
 import {
   HamburgerIcon,
   CloseIcon,
@@ -24,88 +25,149 @@ import {
   ChevronRightIcon,
 } from '@chakra-ui/icons';
 import hlcarelogo from './images/logo.png';
-import {useNavigate} from 'react-router-dom'
+// import { useNavigate } from 'react-router-dom'
+import { UseAuth } from "./authfolderrr/Authcontext";
 
 export default function Navbar() {
-  const { isOpen, onToggle } = useDisclosure();
-  const navigate=useNavigate();
+ 
+    const { logout, user } = UseAuth();
+    const handlenav = async () => {
+      try {
+        await logout();
+      } catch (error) {
+        console.log("nma");
+      }
+  };
+   const { isOpen, onToggle } = useDisclosure();
+  // const navigate=useNavigate();
 
   return (
-    <Box mb={'10px'}>
+    <Box mb={"10px"}>
       <Flex
-        bg={useColorModeValue('black', 'gray.800')}
-        color={useColorModeValue('gray.600', 'white')}
-        minH={'60px'}
+        bg={useColorModeValue("black", "gray.800")}
+        color={useColorModeValue("gray.600", "white")}
+        minH={"60px"}
         py={{ base: 2 }}
         px={{ base: 4 }}
         borderBottom={1}
-        borderStyle={'solid'}
-        borderColor={useColorModeValue('gray.200', 'gray.900')}
-        align={'center'}>
+        borderStyle={"solid"}
+        borderColor={useColorModeValue("gray.200", "gray.900")}
+        align={"center"}
+      >
         <Flex
-          flex={{ base: 1, md: 'auto' }}
+          flex={{ base: 1, md: "auto" }}
           ml={{ base: -2 }}
-          display={{ base: 'flex', md: 'none' }}>
+          display={{ base: "flex", md: "none" }}
+        >
           <IconButton
             onClick={onToggle}
             icon={
-              isOpen ? <CloseIcon color={'red'} w={3} h={3} /> : <HamburgerIcon color={'white'} w={5} h={5} />
+              isOpen ? (
+                <CloseIcon color={"red"} w={3} h={3} />
+              ) : (
+                <HamburgerIcon color={"white"} w={5} h={5} />
+              )
             }
-            variant={'ghost'}
-            aria-label={'Toggle Navigation'}
+            variant={"ghost"}
+            aria-label={"Toggle Navigation"}
           />
         </Flex>
-        <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
+        <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
           <Text
-            textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
-            fontFamily={'heading'}
-            color={useColorModeValue('white', 'white')}>
-            <Image w={'100px'} src={hlcarelogo} h={'50px'}/>
+            textAlign={useBreakpointValue({ base: "center", md: "left" })}
+            fontFamily={"heading"}
+            color={useColorModeValue("white", "white")}
+          >
+            <Button
+              as={"a"}
+              fontSize={"md"}
+              fontWeight={"bold"}
+              variant={"link"}
+              color={"white"}
+              href={"/"}
+            >
+              <Image w={"100px"} src={hlcarelogo} h={"50px"} />
+            </Button>
           </Text>
 
-          <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
+          <Flex display={{ base: "none", md: "flex" }} ml={10}>
             <DesktopNav />
           </Flex>
         </Flex>
 
         <Stack
           flex={{ base: 1, md: 0 }}
-          justify={'flex-end'}
-          direction={'row'}
-          spacing={6}>
+          justify={"flex-end"}
+          direction={"row"}
+          spacing={6}
+        >
           <Button
-            as={'a'}
-            fontSize={'md'}
-            fontWeight={'bold'}
-            variant={'link'}
-            color={'white'}
-            href={'/cart'}>
+            as={"a"}
+            fontSize={"md"}
+            fontWeight={"bold"}
+            variant={"link"}
+            color={"white"}
+            href={"/cart"}
+          >
             Cart 🛒
           </Button>
- 
-          <Button
-            as={'a'}
-            fontSize={'sm'}
-            fontWeight={'bold'}
-            variant={'link'}
-            color={'white'}
-            href={'/login'}>
-            Log In | Sign up
-          </Button>
 
-          {/* <Button
-            as={'a'}
-            display={{ base: 'none', md: 'inline-flex' }}
-            fontSize={'sm'}
-            fontWeight={'bold'}
-            color={'white'}
-            bg={'white'}
-            href={'/signup'}
-            _hover={{
-              bg: 'gray',
-            }}>
-            Sign Up
-          </Button> */}
+          <Flex>
+            <Text
+              textAlign={useBreakpointValue({ base: "center", md: "left" })}
+              fontFamily={"heading"}
+              color={useColorModeValue("white", "white")}
+            >
+              {" "}
+              {user?.displayName}
+            </Text>
+
+            <Box
+              as={"a"}
+              fontWeight={"bold"}
+              variant={"link"}
+              color={"white"}
+              textAlign={useBreakpointValue({ base: "center" })}
+              m={7}
+              bg="tomato"
+              ml={3}
+             
+            >
+              {user && (
+                <Image
+                  w={"60px"}
+                  src="https://cdn.pixabay.com/photo/2015/03/04/22/35/avatar-659652_1280.png"
+                  h={"30px"}
+                />
+              )}
+            </Box>
+          </Flex>
+          <Box
+            as={"a"}
+            fontWeight={"bold"}
+            variant={"link"}
+            color={"white"}
+            textAlign={useBreakpointValue({ base: "center" })}
+            mt={5}
+          >
+            {user?.displayName ? (
+              <Button mt={5} onClick={handlenav}>
+                logout
+              </Button>
+            ) : (
+              <Button
+                as={"a"}
+                fontSize={"sm"}
+                fontWeight={"bold"}
+                variant={"link"}
+                color={"white"}
+                href={"/login"}
+                mt={5}
+              >
+                Log In | Sign up
+              </Button>
+            )}
+          </Box>
         </Stack>
       </Flex>
 
@@ -362,3 +424,16 @@ const NAV_ITEMS = [
     href:'/adminlogin'
   }
 ];
+//  {/* <Button
+          //   as={'a'}
+          //   display={{ base: 'none', md: 'inline-flex' }}
+          //   fontSize={'sm'}
+          //   fontWeight={'bold'}
+          //   color={'white'}
+          //   bg={'white'}
+          //   href={'/signup'}
+          //   _hover={{
+          //     bg: 'gray',
+          //   }}>
+          //   Sign Up
+          // </Button> */}

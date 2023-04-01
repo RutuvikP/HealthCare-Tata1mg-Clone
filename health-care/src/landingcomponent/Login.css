@@ -1,0 +1,79 @@
+.loginwercv{
+    z-index: 10001;
+        position: relative;
+        font-family: Clear Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+            background-color: rgba(0, 0, 0, .65);
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 10001;
+            padding-left: 20px;
+            padding-right: 20px;
+            display: flex;
+                flex-direction: row;
+                justify-content: center;
+                max-height: 650px;
+                width: 100%;
+}
+
+
+.loginpagecss{
+    
+    display:flex;
+    width:70%;
+        margin: auto;
+       
+        height:600px;
+        background-color: white;
+}
+.leftdfghjk{
+    width: 40%;
+    display: grid;
+    text-align: center;
+    margin-top:60px;
+}
+.leftdfghjk>.insidecarosa{
+    /* width:100%; */
+   
+    height:400px;
+    float: left;
+    margin: 40px;
+
+}
+.h1hhh11{
+    font-size:20px;
+    margin: auto;
+    margin-top:30px;
+}
+.leftimgggkl{
+  
+    width:40%;
+    margin: auto;
+    margin-top:50px;
+    overflow: hidden;
+}
+.leftimgggkl>img{
+   margin: auto;
+}
+.ppppwerty{
+    font-size: 14px;
+   
+    width:300px;
+    margin: auto;
+    margin-top: 20px;
+}
+.lastcaroright{
+    width:30%;
+    margin: auto;
+       
+        height:400px;
+        float: right;
+        /* border-radius: 1px; */
+       
+        text-align: center;
+        /* margin-top: auto; */
+       
+        
+}
