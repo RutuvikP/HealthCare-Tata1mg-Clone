@@ -34,7 +34,7 @@ export const postProduct=(dataObj)=>(dispatch)=>{
         dispatch({type:ADMIN_POST_PRODUCT_SUCCESS})
     })
     .catch((err)=>{
-        dispatch({type:ADMIN_PRODUCT_FAILURE})
+        dispatch({type:ADMIN_PRODUCT_FAILURE})8
     })
 };
 

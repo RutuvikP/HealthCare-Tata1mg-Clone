@@ -1,6 +1,6 @@
 let initial = {
-  cart: JSON.parse(localStorage.getItem("cart")) || [],
-  total: 0,
+  cart: [],
+  total: JSON.parse(localStorage.getItem("total")) || 0,
 };
 
 export let reducer = (state = initial, { type, payload }) => {
