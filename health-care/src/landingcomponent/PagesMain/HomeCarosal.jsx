@@ -35,7 +35,7 @@ const responsive = {
 const HomeCarosal = ({ deviceType }) => {
   return (
     <div>
-      <div  className="mnbvcdfghyu">
+      <div className="mnbvcdfghyu">
         <Carousel
           ssr
           partialVisbile
@@ -101,12 +101,7 @@ const HomeCarosal = ({ deviceType }) => {
           </div>
         </div>
         <span class="style__view-all___162yg">
-          <a
-            href="/categories/featured-128"
-            class=""
-            target="_self"
-            rel="noopener"
-          >
+          <a href="/productlist" class="" target="_self" rel="noopener">
             <button class="btn style__view-all-btn___1v_UG style__button___1rP6Q style__info___1X5WU style__xs___E2aat ">
               SEE ALL
             </button>
@@ -179,19 +174,14 @@ const HomeCarosal = ({ deviceType }) => {
           </div>
         </div>
         <span class="style__view-all___162yg">
-          <a
-            href="/categories/featured/combos-674"
-            class=""
-            target="_self"
-            rel="noopener"
-          >
+          <a href="/productlist" class="" target="_self" rel="noopener">
             <button class="btn style__view-all-btn___1v_UG style__button___1rP6Q style__info___1X5WU style__xs___E2aat ">
               SEE ALL
             </button>
           </a>
         </span>
       </div>
-      <div className="mnbvcdfghyu">
+      <div className="mnbvcdfghyulong">
         <Carousel
           ssr
           partialVisbile
@@ -217,7 +207,7 @@ const HomeCarosal = ({ deviceType }) => {
                   >
                     <div class="sku-card-item style__slide-parent___3t2fC style__hover-effect___1MxM7">
                       <a
-                        href="/otc/tata-1mg-diabetes-care-combo-pack-for-cholesterol-blood-sugar-management-otc795842"
+                        href=" "
                         class="style__slider-item___2YIPO"
                         target="_blank"
                         rel="noopener"
@@ -288,12 +278,7 @@ const HomeCarosal = ({ deviceType }) => {
           </div>
         </div>
         <span class="style__view-all___162yg">
-          <a
-            href="/categories/featured/combos-674"
-            class=""
-            target="_self"
-            rel="noopener"
-          >
+          <a href="/productlist" class="" target="_self" rel="noopener">
             <button class="btn style__view-all-btn___1v_UG style__button___1rP6Q style__info___1X5WU style__xs___E2aat ">
               SEE ALL
             </button>
@@ -366,12 +351,7 @@ const HomeCarosal = ({ deviceType }) => {
           </div>
         </div>
         <span class="style__view-all___162yg">
-          <a
-            href="/categories/featured/combos-674"
-            class=""
-            target="_self"
-            rel="noopener"
-          >
+          <a href="/productlist" class="" target="_self" rel="noopener">
             <button class="btn style__view-all-btn___1v_UG style__button___1rP6Q style__info___1X5WU style__xs___E2aat ">
               SEE ALL
             </button>
@@ -446,12 +426,7 @@ const HomeCarosal = ({ deviceType }) => {
           </div>
         </div>
         <span class="style__view-all___162yg">
-          <a
-            href="/categories/featured/combos-674"
-            class=""
-            target="_self"
-            rel="noopener"
-          >
+          <a href="/productlist" class="" target="_self" rel="noopener">
             <button class="btn style__view-all-btn___1v_UG style__button___1rP6Q style__info___1X5WU style__xs___E2aat ">
               SEE ALL
             </button>
