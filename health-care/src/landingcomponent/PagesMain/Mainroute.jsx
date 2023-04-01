@@ -9,10 +9,10 @@ import { AdminEditProduct } from "../../Pages/AdminPages/AdminEditProduct";
 import SingleProductPage from "../../Pages/SingleProductPage";
 
 import AdminDashboardPage from "../../Pages/AdminPages/AdminDashboardPage";
-import AddProductPage from "../../Pages/AdminPages/AddProductPage";
-// import { Cart } from "../../Pages/Cart";
-// import { Protect } from "./authfolderrr/Protect";
-// import { Login } from "../Login";
+import AddProductPage from "../../Pages/AdminPages/AddProductPage"
+import Cart from "../../Pages/Cart";
+import Checkout from "../../Pages/Checkout";
+
 
 export const Mainroute = () => {
   return (
@@ -25,14 +25,18 @@ export const Mainroute = () => {
         <Route path="/admin" element={<AdminLogin />}></Route>
         <Route path="/adminproductlist" element={<AdminProductList />}></Route>
         <Route path="/edit/:id" element={<AdminEditProduct />}></Route>
-
-        <Route path="/adminlogin" element={<AdminLogin />}></Route>
-        <Route path="/admindashboard" element={<AdminDashboardPage />}></Route>
-        <Route path="/adminproductlist" element={<AdminProductList />}></Route>
-        <Route path="/addproduct" element={<AddProductPage />}></Route>
-        <Route path="/edit/:id" element={<AdminEditProduct />}></Route>
+       
        
         
+
+        <Route path="/adminlogin" element={<AdminLogin/>}></Route>
+        <Route path="/admindashboard" element={<AdminDashboardPage/>}></Route>
+        <Route path="/adminproductlist" element={<AdminProductList/>}></Route>
+        <Route path="/addproduct" element={<AddProductPage/>}></Route>
+        <Route path="/edit/:id" element={<AdminEditProduct/>}></Route>
+
+        <Route path="/cart" element={<Cart/>}></Route>
+        <Route path='/checkout/payment-information' element={<Checkout/>}></Route>
       </Routes>
     </div>
   );
