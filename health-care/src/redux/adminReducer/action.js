@@ -35,6 +35,7 @@ export const postProduct=(dataObj)=>(dispatch)=>{
     })
     .catch((err)=>{
         dispatch({type:ADMIN_PRODUCT_FAILURE})
+    })
 };
 
 export const deleteProduct=(id)=>{
