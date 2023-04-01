@@ -1,7 +1,9 @@
 //Sidebar.jsx
 import {
   Box,
+  Button,
   Checkbox,
+  Flex,
   Input,
   Radio,
   RadioGroup,
@@ -9,14 +11,25 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import { useSearchParams } from "react-router-dom";
 
 function Sidebar() {
+  const { total } = useSelector((store) => store.productReducer);
   const [searchParams, setSearchParams] = useSearchParams();
   const initialBrand = searchParams.getAll("brand");
   //console.log(initialBrand);
   const [brand, setBrand] = useState(initialBrand || []);
   const [order, setOrder] = useState("");
+  const getCurrentPage = (page) => {
+    page = Number(page);
+
+    if (typeof page !== "number" || page <= 0 || !page) {
+      return 1;
+    }
+    return page;
+  };
+  const [page, setPage] = useState(getCurrentPage(searchParams.get("page")));
 
   const handleChange = (e) => {
     let newBrand = [...brand];
@@ -33,22 +46,28 @@ function Sidebar() {
     //console.log(e);
     setOrder(e);
   };
+
+  const handleClick = (val) => {
+    setPage((prev) => prev + val);
+  };
+
   useEffect(() => {
     const params = {
       brand,
     };
     order && (params.order = order);
+    page && (params.page = page);
     //params.sort?
     setSearchParams(params);
-  }, [brand, order]);
+  }, [brand, order, page]);
 
   return (
     <Box
-      w={"170px"}
+      w={"210px"}
       p={5}
-      boxShadow={
-        " rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px"
-      }
+      boxShadow=" rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset"
+      gap={3}
+      m={"auto"}
     >
       <Box borderBottom={"1px solid grey"} textAlign={"left"}>
         <Text>
@@ -166,6 +185,25 @@ function Sidebar() {
           </Stack>
         </RadioGroup>
       </Box>
+      <Flex gap={2}>
+        <Button
+          colorScheme={"blue"}
+          isDisabled={page === 1}
+          onClick={() => handleClick(-1)}
+        >
+          Prev
+        </Button>
+        <Button colorScheme={"blue"} isDisabled>
+          {page}
+        </Button>
+        <Button
+          colorScheme={"blue"}
+          isDisabled={page === Math.ceil(total / 8)}
+          onClick={() => handleClick(1)}
+        >
+          Next
+        </Button>
+      </Flex>
     </Box>
   );
 }

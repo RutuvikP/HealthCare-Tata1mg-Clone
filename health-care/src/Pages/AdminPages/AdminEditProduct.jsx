@@ -1,7 +1,7 @@
-import { Heading,Input, VStack,Select, Button, InputLeftAddon, InputLeftElement, InputGroup  } from "@chakra-ui/react";
+import { Heading,Input, VStack,Select, Button, InputLeftAddon, InputLeftElement, InputGroup, useToast  } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { editProduct } from "../../redux/adminReducer/action";
 
 export const AdminEditProduct=()=>{
@@ -9,6 +9,8 @@ export const AdminEditProduct=()=>{
     // console.log(id);
     const dispatch=useDispatch();
     const [singleProduct,setSingleProduct] = useState({});
+    const toast=useToast();
+    const navigate=useNavigate();
     const products=useSelector((store)=>store.adminReducer.products)
     // console.log(products);
 
@@ -23,6 +25,17 @@ export const AdminEditProduct=()=>{
     const handleEdit=()=>{
         // console.log(singleProduct);
         dispatch(editProduct(singleProduct,id))
+        toast({
+            title:"Product Edited Successfully!!",
+            description:`Redirecting you to Product List page now!`,
+            status:"success",
+            isClosable:true,
+            duration:3000,
+            position:'top'
+        })
+        setTimeout(() => {
+            navigate('/adminproductlist')
+        }, 3000);
     }
 
     useEffect(()=>{
@@ -30,9 +43,9 @@ export const AdminEditProduct=()=>{
         setSingleProduct(data);
     },[]);
     return (
-        <div>
+        <div style={{boxShadow:'rgba(0, 0, 0, 0.24) 0px 3px 8px', width:"50%", margin:"auto", padding:"10px 0px", marginTop:"20px"}}>
             <Heading size={'md'}>Edit Product of ID:{id}</Heading>
-            <VStack w={'50%'} m={'auto'} gap={'10px'}>
+            <VStack w={'80%'} m={'auto'} gap={'10px'}>
                 <InputGroup>
                 <InputLeftAddon children='Title'/>
                 <Input name="title" onChange={(e)=>handleChange(e)} value={singleProduct.title} type={'text'} placeholder='Product Title'/>

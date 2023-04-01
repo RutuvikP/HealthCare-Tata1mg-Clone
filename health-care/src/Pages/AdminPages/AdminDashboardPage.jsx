@@ -3,20 +3,21 @@ import React, { useEffect } from "react";
 import Chart from "react-apexcharts";
 import { useDispatch, useSelector } from "react-redux";
 import AdminNav from "../../Components/AdminComponents/AdminNav";
-import { getMultivitaminsData } from "../../redux/admin/admin.action";
+import { getProductAdmin } from "../../redux/adminReducer/action";
+
 
 
 const AdminDashboardPage = () => {
   const dispatch = useDispatch();
-  const {multivitaminsData}= useSelector((store)=>store.adminReducer)
+  const {products}= useSelector((store)=>store.adminReducer)
   
   useEffect(() => {
-    dispatch(getMultivitaminsData());
+    dispatch(getProductAdmin);
   }, []);
 
-  console.log(multivitaminsData,"multivitamins");
+  console.log(products,"products");
 
-  const vitaProducts = multivitaminsData.length;
+  const vitaProducts = products.length;
   const ayurvedaProducts = 210;
   const diabetesProducts = 159;
 
