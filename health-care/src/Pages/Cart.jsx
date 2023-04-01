@@ -14,7 +14,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { ChevronDownIcon, AddIcon } from "@chakra-ui/icons";
 
 import axios from "axios";
-import { changeQuantityAction, deleteAction, getDataAction } from "../redux/CartReducer/action";
+import { changeQuantityAction, deleteAction, getDataAction } from "../redux/cartReducer/action";
 // import CartCarousel from "./CartCarousel";
 
 const Cart = () => {
