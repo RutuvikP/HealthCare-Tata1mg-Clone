@@ -138,7 +138,7 @@ const Cart = () => {
               </Text>
               <Link to="/">
                 {" "}
-                <AddIcon />
+                <AddIcon/>
               </Link>
             </Box>
           </Box>
@@ -191,4 +191,4 @@ const Cart = () => {
   );
 };
 
-export { Cart };
+export {Cart}
