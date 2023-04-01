@@ -10,6 +10,8 @@ import SingleProductPage from "../../Pages/SingleProductPage";
 
 import AdminDashboardPage from "../../Pages/AdminPages/AdminDashboardPage";
 import AddProductPage from "../../Pages/AdminPages/AddProductPage";
+import Cart from "../../Pages/Cart";
+import Checkout from "../../Pages/Checkout";
 
 
 export const Mainroute = () => {
@@ -30,6 +32,8 @@ export const Mainroute = () => {
         <Route path="/addproduct" element={<AddProductPage/>}></Route>
         <Route path="/edit/:id" element={<AdminEditProduct/>}></Route>
 
+        <Route path="/cart" element={<Cart/>}></Route>
+        <Route path='/checkout/payment-information' element={<Checkout/>}></Route>
       </Routes>
     </div>
   );

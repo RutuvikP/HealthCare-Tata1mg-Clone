@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { deleteProduct, getProductAdmin } from "../../redux/adminReducer/action";
 import { Link, useLocation } from "react-router-dom";
 import AdminNav from "../../Components/AdminComponents/AdminNav";
+import {EditIcon, DeleteIcon} from '@chakra-ui/icons'
 
 export const AdminProductList = () => {
 
@@ -73,8 +74,8 @@ export const AdminProductList = () => {
                                     <Td>{el.title.slice(0,100)}</Td>
                                     <Td>{el.brand}</Td>
                                     <Td>{el.price}</Td>
-                                    <Td color={'blue'} _hover={{ cursor: 'pointer' }}><Link to={`/edit/${el.id}`}>Edit</Link></Td>
-                                    <Td color={'red'} _hover={{ cursor: 'pointer' }} onClick={()=>handleDelete(el.id)}>Delete</Td>
+                                    <Td bg='#fff'  _hover={{ cursor: 'pointer' }}><Link to={`/edit/${el.id}`}><EditIcon w='100%' h='20px' color='black'/></Link></Td>
+                                    <Td bg='#fff' _hover={{ cursor: 'pointer' }} onClick={()=>handleDelete(el.id)}><DeleteIcon w='100%' h='20px' color='red'/></Td>
                                 </Tr>
                             ))
                         }
