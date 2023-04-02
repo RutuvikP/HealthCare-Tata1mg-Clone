@@ -71,10 +71,10 @@ const Banner = () => {
                 Covid Essentials
               </span>
             </a>
-            <i class="fa fa-angle-down drop-icon"></i>
+           
           </div>{" "}
         
-          <div class="dropdown-content">
+          <div class="dropdown-content" style={{color:"black"}}>
             <a href=" ">
               <span>Covid-19 Self test kits</span>
             </a>

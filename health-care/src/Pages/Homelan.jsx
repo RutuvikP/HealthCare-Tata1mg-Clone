@@ -9,7 +9,7 @@ import  "../landingcomponent/PagesMain/Homelan.css";
 
 export const Homelan = () => {
   return (
-    <div style={{ backgroundColor: "rgb(236, 236, 236)" }}>
+    <div style={{ backgroundColor: " #f6f2f2" }}>
       <Banner />
       <section className="style__pharmaHeader___1hcdG">
         <h1>
@@ -55,7 +55,6 @@ export const Homelan = () => {
       </div>
       <HomeCarosal />
       <Footer1 />
-     
     </div>
   );
 };
