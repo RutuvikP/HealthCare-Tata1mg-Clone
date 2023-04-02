@@ -1,13 +1,13 @@
-import { ModalOverlay, useDisclosure, Modal, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, Button, FormControl, Input } from "@chakra-ui/react"; 
+import { ModalOverlay, useDisclosure, Modal, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, Button, FormControl, Input, useToast } from "@chakra-ui/react"; 
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import AdminNav from "../../Components/AdminComponents/AdminNav";
-import { postProduct } from "../../redux/adminReducer/action";
-import { AdminProductList } from "./AdminProductList";
+import { getProductAdmin, postProduct } from "../../redux/adminReducer/action";
+import { useNavigate } from "react-router-dom";
 
 const initialState = {
   title:"",
-  image:"",
+  img:"",
   price:"",
   brand:"",
   rating:null,
@@ -17,6 +17,7 @@ const initialState = {
 const AddProductPage = () => {
   const [product, setProduct] = useState(initialState);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const OverlayOne = () => (
     <ModalOverlay
@@ -29,7 +30,7 @@ const AddProductPage = () => {
   const [overlay, setOverlay] = React.useState(<OverlayOne />)
   
   // const initialRef = React.useRef(null);
-  
+  const toast=useToast();
 
   const handleChange = (e) => {
     const {name, value} = e.target;
@@ -42,8 +43,28 @@ const AddProductPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(postProduct(product))
+    const postData = {
+      title: product.title,
+      img: product.img,
+      price: product.price,
+      brand: product.brand,
+      rating: Number(product.rating),
+      description: product.description
+  }
+    dispatch(postProduct(postData))
+    .then(() => {
+      dispatch(getProductAdmin);
+      toast({
+          title:"Product added successfully !!",
+          status:"success",
+          isClosable:true,
+          position:'top',
+          duration:2000
+      })
+      navigate('/allproduct');
+    })
     setProduct(initialState);
+    
   };
 
   return (
@@ -70,7 +91,7 @@ const AddProductPage = () => {
             </FormControl>
 
             <FormControl mt={4}>
-              <Input type="text" value={product.image} placeholder="Image" onChange={(e) => handleChange(e)} name="image"/>
+              <Input type="text" value={product.img} placeholder="Image" onChange={(e) => handleChange(e)} name="img"/>
             </FormControl>
 
             <FormControl mt={4}>
@@ -98,7 +119,6 @@ const AddProductPage = () => {
           </ModalFooter>
         </ModalContent>
       </Modal>
-      <AdminProductList/>
     </>
   )
 };

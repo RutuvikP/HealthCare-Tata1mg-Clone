@@ -4,12 +4,13 @@ import Chart from "react-apexcharts";
 import { useDispatch, useSelector } from "react-redux";
 import AdminNav from "../../Components/AdminComponents/AdminNav";
 import { getProductAdmin } from "../../redux/adminReducer/action";
+import AddProductPage from "./AddProductPage";
 
 
 
 const AdminDashboardPage = () => {
   const dispatch = useDispatch();
-  const {products}= useSelector((store)=>store.adminReducer)
+  const {products}= useSelector((store)=>store.adminReducer);
   
   useEffect(() => {
     dispatch(getProductAdmin);
@@ -30,24 +31,27 @@ const AdminDashboardPage = () => {
       </Box>
       <Stack
         width={["100%","100%" ,"100%" , "80%"]}
-        marginTop={"60px"}
-        marginLeft={"-30px"}
-        pt={30}
+        marginTop={"-30px"}
+        marginLeft={"-15px"}
+        pt={10}
         fontFamily={"sans-serif"}
         border="0px solid black"
       >
-        <Stack
-          bg={"white"}
+        <HStack
+          bg={"blue.300"}
           textAlign="center"
-          padding="10px 0px"
+          padding="10px 25px"
           borderRadius={5}
           boxShadow={"base"}
           w="100%"
+          gap={'15'}
+          fontWeight={'bold'}
         >
           <Text fontSize={["18px" ,"20px","25px" ]} fontFamily={"sans-serif"} >
             Total Products : {vitaProducts + ayurvedaProducts + diabetesProducts}
           </Text>
-        </Stack>
+          <AddProductPage/>
+        </HStack>
         <Box borderRadius={15} mt={10}>
           <Chart
             type="radialBar"
