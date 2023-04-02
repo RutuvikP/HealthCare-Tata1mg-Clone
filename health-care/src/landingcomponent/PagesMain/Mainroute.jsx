@@ -16,6 +16,9 @@ import {Cart} from "../../Pages/Cart";
 import Checkout from "../../Pages/Checkout";
 import { Login } from "../Login";
 import { Protect } from "./authfolderrr/Protect";
+import Thankyou from "../../Pages/Thankyou";
+import AllProducts from "../../Pages/AdminPages/AllProducts";
+import AdminUserPage from "../../Pages/AdminPages/AdminUserPage";
 
 export const Mainroute = () => {
   return (
@@ -47,7 +50,9 @@ export const Mainroute = () => {
           path="/checkout/payment-information"
           element={<Checkout />}
         ></Route>
-
+        <Route path='/thankyou' element={<Thankyou/>}></Route>
+        <Route path="/allproduct" element={<AllProducts/>}></Route>
+        <Route path="/adminuser" element={<AdminUserPage/>}></Route>
       </Routes>
     </div>
   );

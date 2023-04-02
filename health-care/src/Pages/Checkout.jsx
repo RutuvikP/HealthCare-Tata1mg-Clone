@@ -541,7 +541,7 @@ const Checkout = () => {
                 display={"flex"}
               >
                 <Text> MRP Total</Text>
-                <Text>Rs,{total}</Text>
+                <Text>Rs {total}</Text>
               </Box>
               <Box
                 fontSize={"sm"}
@@ -550,7 +550,7 @@ const Checkout = () => {
                 display={"flex"}
               >
                 <Text> Nedmeds Discount</Text>
-                <Text>-Rs,75.00</Text>
+                <Text>-Rs 75.00</Text>
               </Box>
               <Box
                 fontSize={"sm"}
@@ -560,7 +560,7 @@ const Checkout = () => {
                 display={"flex"}
               >
                 <Text>Total Amount*</Text>
-                <Text>Rs,{total-75}</Text>
+                <Text>Rs {total-75}</Text>
               </Box>
               <Box
                 bg={"#F3F8EC"}
@@ -586,7 +586,7 @@ const Checkout = () => {
               >
                 <Box>
                   <Text fontSize={"xs"}>TOTAL AMOUNT </Text>
-                  <Text fontSize={"larger"}>Rs,{total-75}</Text>
+                  <Text fontSize={"larger"}>Rs {total-75}</Text>
                 </Box>
 
                 <Box>
@@ -598,8 +598,6 @@ const Checkout = () => {
             </Box>
           </Box>
         </Box>
-
-        <div>Checkout</div>
       </Box>
     </>
   );

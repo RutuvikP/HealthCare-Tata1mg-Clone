@@ -26,7 +26,9 @@ const Cart = () => {
     dispatch(getDataAction);
   }, []);
   let handleDelete = (id) => {
-    dispatch(deleteAction(id));
+    deleteAction(id).then((res)=>{
+      dispatch(getDataAction)
+    })
   };
   let handleSelect = (value,id) => {
     dispatch(changeQuantityAction(value,id))
@@ -95,18 +97,18 @@ const Cart = () => {
                       width={40}
                       onChange={(e) => handleSelect(e.target.value, el.id)}
                     >
-                    <option>quantity: {el.quantity}</option>
-                      <option value="1">quantity: 1</option>
-                      <option value="2">quantity: 2</option>
-                      <option value="3">quantity: 3</option>
-                      <option value="4">quantity: 4</option>
-                      <option value="5">quantity: 5</option>
-                      <option value="6">quantity: 6</option>
+                    <option>Quantity: {el.quantity}</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
                     </Select>
                   </Box>
                   <Box display={"flex"}>
                     <Box pr={2} borderRight={"1px solid grey"}>
-                      <Text> Delivery between Nov 11 6PM-Nov 18 10PM </Text>
+                      <Text> Delivery between Apr 11 6PM-Apr 18 10PM </Text>
                     </Box>
                     <Box>
                       <Button
@@ -154,7 +156,7 @@ const Cart = () => {
               display={"flex"}
             >
               <Text> MRP Total</Text>
-              <Text>Rs,{total}</Text>
+              <Text>Rs {total}</Text>
             </Box>
            
             <Box

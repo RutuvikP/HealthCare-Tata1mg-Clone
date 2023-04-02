@@ -27,6 +27,7 @@ import {
 import hlcarelogo from './images/logo.png';
 // import { useNavigate } from 'react-router-dom'
 import { UseAuth } from "./authfolderrr/Authcontext";
+import { useSelector } from 'react-redux';
 
 export default function Navbar() {
  
@@ -40,7 +41,7 @@ export default function Navbar() {
   };
    const { isOpen, onToggle } = useDisclosure();
   // const navigate=useNavigate();
-
+  const cart=useSelector((store)=>store.cartReducer.cart)
   return (
     <Box mb={"10px"}>
       <Flex
@@ -109,7 +110,7 @@ export default function Navbar() {
             color={"white"}
             href={"/cart"}
           >
-            Cart 🛒
+            Cart 🛒 {cart.length!==0?<Badge fontWeight={'bold'} colorScheme={'orange'} borderRadius={'50%'}>{cart.length}</Badge>:null}
           </Button>
 
           <Flex>

@@ -65,7 +65,7 @@ function Sidebar() {
     <Box
       w={"210px"}
       p={5}
-      boxShadow=" rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset"
+      boxShadow= 'rgba(0, 0, 0, 0.24) 0px 3px 8px'
       gap={3}
       m={"auto"}
     >

@@ -60,7 +60,7 @@ function ProductList() {
             />
           </Center>
         ) : (
-          <SimpleGrid columns={[1, 2, 2, 4]} spacing={10} margin={10}>
+          <SimpleGrid columns={[1, 2, 2, 4]} gap={'50px'} spacing={10} margin={10}>
             {products.map((el, i) => {
               return <ProductItem key={i} {...el} />;
             })}

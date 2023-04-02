@@ -17,6 +17,9 @@ export let reducer = (state = initial, { type, payload }) => {
     case "CALCULATE_PRICE": {
       return { ...state, total: payload };
     }
+    case "RESET":{
+      return {...state,cart:[]}
+    }
     default:
       return state;
   }
