@@ -27,9 +27,9 @@ export const editProduct=(obj,id)=>(dispatch)=>{
 }
 
 
-export const postProduct=(dataObj)=>(dispatch)=>{
+export const postProduct=(dataObj)=>async(dispatch)=>{
     dispatch({type:ADMIN_PRODUCT_REQUEST})
-    axios.post(`https://poised-red-shrimp.cyclic.app/multivitamins`, dataObj)
+    await axios.post(`https://poised-red-shrimp.cyclic.app/multivitamins`, dataObj)
     .then((res)=>{
         dispatch({type:ADMIN_POST_PRODUCT_SUCCESS})
     })

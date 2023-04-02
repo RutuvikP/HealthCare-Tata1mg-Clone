@@ -53,7 +53,7 @@ export const AdminProductList = () => {
         return (
             <>
             <AdminNav/>
-            {location.pathname === "/addproduct" ? "" : <Text fontWeight={'bold'} fontSize={'1rem'}>Product List</Text>}
+            {location.pathname === "/allproduct" ? <Text fontWeight={'bold'} fontSize={'1rem'}>All Products</Text> : <Text fontWeight={'bold'} fontSize={'1rem'}>Product List</Text>}
             <TableContainer marginLeft={'18%'}>
                 <Table size={'sm'} variant='striped' m={'auto'} w={'80%'}>
                     <Thead>

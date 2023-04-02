@@ -30,10 +30,10 @@ import {RiLogoutCircleFill} from 'react-icons/ri';
 
 
 const LinkItems= [
-  { name: 'Home', icon: AiFillHome, path:'/admin_dashboard'},
-  { name: 'Add Product', icon: HiFolderAdd, path:'/addproduct' },
+  { name: 'Home', icon: AiFillHome, path:'/admindashboard'},
+  { name: 'All Product', icon: HiFolderAdd, path:'/allproduct' },
   { name: 'Multivitamins', icon: GiMedicines, path: '/adminproductlist'},
-  { name: 'Users', icon: FaUsers, path:'/admin_users' },
+  { name: 'Users', icon: FaUsers, path:'/adminuser' },
   { name: 'Logout', icon: RiLogoutCircleFill, path:'/' }
 ];
 
