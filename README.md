@@ -5,7 +5,8 @@ this is clone of Tata 1mg Website  this is  India's best online pharmacy with a 
 
 
 Tata 1mg, previously 1mg, is a healthcare platform based in Gurugram, India. It provides services, including e-pharmacy, diagnostics, e-consultation and health content. It was founded in April 2015 by Prashant Tandon, Gaurav Agarwal and Vikas Chauhan
-this is that website ---![image](https://user-images.githubusercontent.com/112895946/229422156-2eced961-c395-4e23-a7e5-81d13a28a8b2.png)
+this is our website --->
+![Screenshot (223)](https://user-images.githubusercontent.com/112895946/229422523-903c464d-80fa-4f5f-9275-2242ee3b56ac.png)
 
 
 we made this website's some page and functionality in just five days with my four team mates .
