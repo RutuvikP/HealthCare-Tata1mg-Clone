@@ -10,7 +10,7 @@ export const getProducts = (paramObj) => (dispatch) => {
   dispatch({ type: PRODUCT_REQUEST });
   axios
     .get(
-      `https://poised-red-shrimp.cyclic.app/multivitamins?_limit=8`,
+      `https://wild-pink-slug-sock.cyclic.app/multivitamins?_limit=8`,
       paramObj
     )
     .then((res) => {
@@ -31,7 +31,7 @@ export const getProducts = (paramObj) => (dispatch) => {
 //   const newObj = { ...old, ["quantity"]: 1 };
 //   dispatch({ type: PRODUCT_REQUEST });
 //   axios
-//     .post(`https://poised-red-shrimp.cyclic.app/cart`, newObj)
+//     .post(`https://wild-pink-slug-sock.cyclic.app/cart`, newObj)
 //     .then((res) =>{
 //       dispatch({ type: ADD_PRODUCT_CART_SUCCESS });
 //     console.log(res)})

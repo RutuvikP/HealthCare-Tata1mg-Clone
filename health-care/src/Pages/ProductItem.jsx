@@ -20,7 +20,7 @@ function ProductItem({ ...el }) {
     });
     const newObj = { ...el, ["quantity"]: 1 };
     axios
-      .post(`https://poised-red-shrimp.cyclic.app/cart`, newObj)
+      .post(`https://wild-pink-slug-sock.cyclic.app/cart`, newObj)
       .then((response) => response.json())
       .then((data) => {
         console.log("Success:", data);

@@ -3,47 +3,51 @@ import { ADMIN_EDIT_PRODUCT_SUCCESS, ADMIN_POST_PRODUCT_SUCCESS, ADMIN_PRODUCT_F
 
 export const getProductAdmin=(dispatch)=>{
     dispatch({type:ADMIN_PRODUCT_REQUEST})
-    axios.get(`https://poised-red-shrimp.cyclic.app/multivitamins`)
-    .then((res)=>{
+    axios
+      .get(`https://wild-pink-slug-sock.cyclic.app/multivitamins`)
+      .then((res) => {
         // console.log(res.data);
-        dispatch({type:ADMIN_PRODUCT_SUCCESS, payload:res.data})
-    })
-    .catch(()=>{
-        dispatch({type:ADMIN_PRODUCT_FAILURE})
-    })
+        dispatch({ type: ADMIN_PRODUCT_SUCCESS, payload: res.data });
+      })
+      .catch(() => {
+        dispatch({ type: ADMIN_PRODUCT_FAILURE });
+      });
 };
 
 export const editProduct=(obj,id)=>(dispatch)=>{
     dispatch({type:ADMIN_PRODUCT_REQUEST})
-    axios.patch(`https://poised-red-shrimp.cyclic.app/multivitamins/${id}`,obj)
-    .then((res)=>{
+    axios
+      .patch(`https://wild-pink-slug-sock.cyclic.app/multivitamins/${id}`, obj)
+      .then((res) => {
         // console.log(res.data);
-        dispatch({type:ADMIN_EDIT_PRODUCT_SUCCESS})
-    })
-    .catch((err)=>{
+        dispatch({ type: ADMIN_EDIT_PRODUCT_SUCCESS });
+      })
+      .catch((err) => {
         // console.log(err);
-        dispatch({type:ADMIN_PRODUCT_FAILURE})
-    })
+        dispatch({ type: ADMIN_PRODUCT_FAILURE });
+      });
 }
 
 
 export const postProduct=(dataObj)=>async(dispatch)=>{
     dispatch({type:ADMIN_PRODUCT_REQUEST})
-    await axios.post(`https://poised-red-shrimp.cyclic.app/multivitamins`, dataObj)
-    .then((res)=>{
-        dispatch({type:ADMIN_POST_PRODUCT_SUCCESS})
-    })
-    .catch((err)=>{
-        dispatch({type:ADMIN_PRODUCT_FAILURE})
-    })
+    await axios
+      .post(`https://wild-pink-slug-sock.cyclic.app/multivitamins`, dataObj)
+      .then((res) => {
+        dispatch({ type: ADMIN_POST_PRODUCT_SUCCESS });
+      })
+      .catch((err) => {
+        dispatch({ type: ADMIN_PRODUCT_FAILURE });
+      });
 };
 
 export const deleteProduct=(id)=>{
-    return axios.delete(`https://poised-red-shrimp.cyclic.app/multivitamins/${id}`)
-    .then((res)=>{
+    return axios
+      .delete(`https://wild-pink-slug-sock.cyclic.app/multivitamins/${id}`)
+      .then((res) => {
         console.log(res);
-    })
-    .catch((err)=>{
+      })
+      .catch((err) => {
         console.log(err);
-    })
+      });
 }
