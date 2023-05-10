@@ -1,5 +1,4 @@
-
-# Tata1mg Clone
+  <h1 align="center"><-------~ Tata1mg Clone ~-------></h1>
 
 In this project we have tried to clone the functionalities of Tata1mg website. Tata1mg is a healthcare platform in India, that provides services including e-pharmacy, diagnostics etc.
 
