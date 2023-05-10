@@ -1,55 +1,54 @@
-          
-          
-                                                                       ---chemical-rake-3857--
-hello everyone 👋
+
+# Tata1mg Clone
+
+In this project we have tried to clone the functionalities of Tata1mg website. Tata1mg is a healthcare platform in India, that provides services including e-pharmacy, diagnostics etc.
+
+### Deployed link - https://health-care-tau.vercel.app/
 
 
-this is clone of Tata 1mg Website  this is  India's best online pharmacy with a wide range of Prescription and OTC medicines. Order medicines online at 1mg's medicine store in 100+ cities like - Delhi, Kolkata etc.
+## Tech Stack
+
+<a href="#"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a> <a href="#"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg" alt="redux" width="40" height="40"/> </a>
 
 
-Tata 1mg, previously 1mg, is a healthcare platform based in Gurugram, India. It provides services, including e-pharmacy, diagnostics, e-consultation and health content. It was founded in April 2015 by Prashant Tandon, Gaurav Agarwal and Vikas Chauhan
-this is our website --->
-![Screenshot (223)](https://user-images.githubusercontent.com/112895946/229422523-903c464d-80fa-4f5f-9275-2242ee3b56ac.png)
+## Features
+### Admin Functionalities
+- Only if admin credentials are correct then only admin dashboard can be accessed
+- Add a new product to the website
+- Can edit the products properties
+- Can remove the products from the website
+### Product Page Functionalities
+- Filtering the products by brand names
+- Sorting the products by price low to high and high to low
+- Sorting and Filtering working together seamlessly
+- Pagination
+### Cart Page Functionalities
+- Can increase and decrease the quantity of product
+- Total price will also change according to product quantity
+- Can remove the product from cart
 
 
-we made this website's some page and functionality in just five days with my four team mates .
- so  me and my team mates and their responsibilities are like below--
- 
- 
- team name --->
- 1.Rutvik Patil
-2. Prachi Tiwari 
-3. Aditya Tambe 
-4. Manoj Murmur
-5. Rahul Pandey
+## Screenshots
+### Landing Page
+![Landing Page](https://user-images.githubusercontent.com/112895946/229422523-903c464d-80fa-4f5f-9275-2242ee3b56ac.png)
 
-responsibility ---->
-1.Landind page
- 2.Login/Sign-up page
-3. cart page 
- 4.Admin page 
- 5.payment page 
- 6.product page 
- 
- complete things of responsibilities ------->
- 
- Admin Functionalities -
-1) Only if admin credentials are correct then only admin dashboard can be accessed 
-2) Add a new product to the website
-3) Edit the products properties
-4) Remove the products from the website
+### Product Page
+![Product Page](https://github.com/RutuvikP/chemical-rake-3857/assets/115460351/2fc81644-05ad-4a0a-a03c-1e7fd4d483bd)
 
-Products Page-
-1) Each product page is limited to 8 products 
-2) Filter the products by Brand names
-3) Sort the products by price low to high and high to low
-4) Both filtering and sorting are working together seamlessly
-5) Pagination is working seamlessly
+### Cart Page
+![Cart Page](https://github.com/RutuvikP/chemical-rake-3857/assets/115460351/262ed724-25c0-4d46-a98e-f7bcf4511219)
 
-Cart Page-
-1) Can increase and decrease the quantity of product
-2) Total price will also change according to product quantity
-3) Can remove the product from cart
+### Admin Dashboard
+![Checkout Page](https://github.com/RutuvikP/chemical-rake-3857/assets/115460351/607d1a1a-fb26-4ca8-a1e5-8a5362760fe1)
+
+### Admin Products Page
+![Payment Page](https://github.com/RutuvikP/chemical-rake-3857/assets/115460351/0abf59f4-d94b-440b-86fa-0887f0a69722)
 
 
+## Authors
 
+- [@RutuvikP](https://github.com/RutuvikP)
+- [@prachi913](https://github.com/prachi913)
+- [@tambeaditya101](https://github.com/tambeaditya101)
+- [@officialmanoj14](https://github.com/officialmanoj14)
+- [@Rahulaustralia](https://github.com/Rahulaustralia)
