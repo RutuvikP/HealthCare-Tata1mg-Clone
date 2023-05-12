@@ -12,13 +12,7 @@ export let getDataAction = async (dispatch) => {
   dispatch({ type: "CALCULATE_PRICE", payload: sum });
   return res.data;
 };
-// export let deleteAction = (id) => (dispatch) => {
-//   axios
-//     .delete(`https://wild-pink-slug-sock.cyclic.app/cart/${id}`)
-//     .finally((res) => {
-//       dispatch(getDataAction);
-//     });
-// };
+
 
 export let deleteAction = (id) =>  {
  return axios

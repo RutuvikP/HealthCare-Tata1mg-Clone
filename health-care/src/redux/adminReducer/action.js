@@ -6,7 +6,7 @@ export const getProductAdmin=(dispatch)=>{
     axios
       .get(`https://wild-pink-slug-sock.cyclic.app/multivitamins`)
       .then((res) => {
-        // console.log(res.data);
+      
         dispatch({ type: ADMIN_PRODUCT_SUCCESS, payload: res.data });
       })
       .catch(() => {
@@ -19,7 +19,7 @@ export const editProduct=(obj,id)=>(dispatch)=>{
     axios
       .patch(`https://wild-pink-slug-sock.cyclic.app/multivitamins/${id}`, obj)
       .then((res) => {
-        // console.log(res.data);
+       
         dispatch({ type: ADMIN_EDIT_PRODUCT_SUCCESS });
       })
       .catch((err) => {

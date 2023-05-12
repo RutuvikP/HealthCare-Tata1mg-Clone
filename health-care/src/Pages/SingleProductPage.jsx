@@ -72,7 +72,8 @@ function SingleProductPage() {
         lg: "20px auto 20px",
       }}
       //border="1px solid black"
-      boxShadow="rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset"
+      boxShadow="0px 0px 2px"
+      // boxShadow="rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset"
       h={"auto"}
       borderRadius={"10px"}
       //   h={{ base: "100%", sm: "600px", md: "400px", lg: "auto" }}
@@ -91,7 +92,8 @@ function SingleProductPage() {
             src={el.img}
             // fit={"cover"}
             //align={"center"}
-            w={"50%"}
+            w={"auto"}
+
             h={{ base: "220px", sm: "300px", md: "300px" }}
             //border="1px solid red"
           />
@@ -200,8 +202,8 @@ function SingleProductPage() {
             mt={8}
             size={"lg"}
             py={"7"}
-            bg={useColorModeValue("gray.900", "gray.50")}
-            color={useColorModeValue("white", "gray.900")}
+            bg={"green.400"}
+            color="cyan.900"
             textTransform={"uppercase"}
             _hover={{
               transform: "translateY(2px)",

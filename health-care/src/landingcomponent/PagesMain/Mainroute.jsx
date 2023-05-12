@@ -19,6 +19,7 @@ import { Protect } from "./authfolderrr/Protect";
 import Thankyou from "../../Pages/Thankyou";
 import AllProducts from "../../Pages/AdminPages/AllProducts";
 import AdminUserPage from "../../Pages/AdminPages/AdminUserPage";
+import SignupCard from "../../formvalidation/Signup";
 
 export const Mainroute = () => {
   return (
@@ -30,29 +31,33 @@ export const Mainroute = () => {
         <Route path="/admin" element={<AdminLogin />}></Route>
         <Route path="/adminproductlist" element={<AdminProductList />}></Route>
         <Route path="/edit/:id" element={<AdminEditProduct />}></Route>
-
         <Route path="/adminlogin" element={<AdminLogin />}></Route>
         <Route path="/admindashboard" element={<AdminDashboardPage />}></Route>
         <Route path="/adminproductlist" element={<AdminProductList />}></Route>
         <Route path="/addproduct" element={<AddProductPage />}></Route>
         <Route path="/edit/:id" element={<AdminEditProduct />}></Route>
-        <Route path="/login" element={<Login/>}></Route>
+        <Route path="/login" element={<Login />}></Route>
+        <Route path="/signup" element={<SignupCard />}></Route>
         <Route
           path="/cart"
           element={
-            <Protect>
+            
               <Cart />
-            </Protect>
+           
           }
         ></Route>
         ;
         <Route
           path="/checkout/payment-information"
-          element={<Checkout />}
+          element={
+           
+              <Checkout />
+            
+          }
         ></Route>
-        <Route path='/thankyou' element={<Thankyou/>}></Route>
-        <Route path="/allproduct" element={<AllProducts/>}></Route>
-        <Route path="/adminuser" element={<AdminUserPage/>}></Route>
+        <Route path="/thankyou" element={<Thankyou />}></Route>
+        <Route path="/allproduct" element={<AllProducts />}></Route>
+        <Route path="/adminuser" element={<AdminUserPage />}></Route>
       </Routes>
     </div>
   );

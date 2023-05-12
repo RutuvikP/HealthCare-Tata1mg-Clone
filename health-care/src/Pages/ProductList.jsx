@@ -14,7 +14,7 @@ function ProductList() {
   const location = useLocation();
   const { products, isLoading } = useSelector((store) => store.productReducer);
 
-  //console.log(location.search);
+  
   let obj = {
     params: {
       brand: searchParams.getAll("brand"),
@@ -27,20 +27,17 @@ function ProductList() {
   useEffect(() => {
     dispatch(getProducts(obj));
   }, [location.search]);
-  //console.log(searchParams.getAll("brand"));
-  //console.log(products);
-  //console.log(products);
+  
   return (
     <Flex
       justifyContent={"center"}
       flexDirection={{ lg: "row", md: "row", sm: "column", base: "column" }}
-      maxWidth={"80%"}
+      maxWidth={"98%"}
       margin="auto"
     >
       <Box
         justifyContent={"center"}
-        // border={"1px solid red"}
-        // margin={{ lg: "none", md: "none", sm: "auto", base: "auto" }}
+        
         mt={{ md: "130px", lg: "130px", sm: "none", base: "none" }}
       >
         <Sidebar />
