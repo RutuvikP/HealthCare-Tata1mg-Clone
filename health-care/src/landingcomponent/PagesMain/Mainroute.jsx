@@ -19,7 +19,7 @@ import { Protect } from "./authfolderrr/Protect";
 import Thankyou from "../../Pages/Thankyou";
 import AllProducts from "../../Pages/AdminPages/AllProducts";
 import AdminUserPage from "../../Pages/AdminPages/AdminUserPage";
-import SignupCard from "../../formvalidation/Signup";
+
 
 export const Mainroute = () => {
   return (
@@ -37,7 +37,7 @@ export const Mainroute = () => {
         <Route path="/addproduct" element={<AddProductPage />}></Route>
         <Route path="/edit/:id" element={<AdminEditProduct />}></Route>
         <Route path="/login" element={<Login />}></Route>
-        <Route path="/signup" element={<SignupCard />}></Route>
+       
         <Route
           path="/cart"
           element={

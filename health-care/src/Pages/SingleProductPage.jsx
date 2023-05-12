@@ -45,7 +45,7 @@ function SingleProductPage() {
       isClosable: true,
       position: "top",
     });
-    fetch(`https://poised-red-shrimp.cyclic.app/cart`, {
+    fetch(`https://wild-pink-slug-sock.cyclic.app/cart`, {
       method: "POST", // or 'PUT'
       headers: {
         "Content-Type": "application/json",
