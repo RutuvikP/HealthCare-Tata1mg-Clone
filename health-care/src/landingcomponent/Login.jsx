@@ -1,10 +1,29 @@
-import React, { useEffect } from "react";
+// import React, { useEffect } from "react";
 import { GoogleButton } from "react-google-button";
 // import { UseAuth } from "";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 import { UseAuth } from "./PagesMain/authfolderrr/Authcontext";
 import Carousel from "react-multi-carousel";
+import {
+  Flex,
+  Box,
+  FormControl,
+  FormLabel,
+  Input,
+  InputGroup,
+  HStack,
+  InputRightElement,
+  Stack,
+  Button,
+  Heading,
+  Text,
+  useColorModeValue,
+  Link,
+} from "@chakra-ui/react";
+// import { useEffect, useState } from "react";
+import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 import "./Login.css"
+import { useState } from "react";
 const datatty = [
   {
     id: 1,
@@ -48,6 +67,10 @@ const datatty = [
 ];
 
 export const Login = () => {
+  const [showPassword, setShowPassword] = useState(false);
+  const [password, setpassword] = useState("")
+  const [message,setmassage]=useState("")
+
   const { googlesignin, user } = UseAuth();
   const navigate = useNavigate();
   const handle = async () => {
@@ -57,12 +80,28 @@ export const Login = () => {
       console.log(error);
     }
   };
-
-  useEffect(() => {
-    if (user != null) {
-      navigate("/cart");
+//  let p=[]
+  const handleclick = (e) => {
+    e.preventDefault()
+    const regExpress =
+      /^(?=.*\d)(?=.*[a-z])(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
+    if (password === "") {
+      setmassage("Please enter a password.");
+   
+    } else if (!regExpress.test(password)) {
+      setmassage(
+        "Password must be at least 8 characters long and contain at least one digit, one lowercase letter, and one special character."
+      );
+    } else {
+      setmassage("")
     }
-  }, []);
+  }
+
+  // useEffect(() => {
+  //   if (user != null) {
+  //     navigate("/cart");
+  //   }
+  // }, []);
 
   const responsive = {
     desktop: {
@@ -84,7 +123,7 @@ export const Login = () => {
       className="loginwercv"
     >
       <div className="loginpagecss">
-        <div className="leftdfghjk" style={{marginBottom:"100px"}}>
+        <div className="leftdfghjk" style={{ marginBottom: "100px" }}>
           <Carousel
             responsive={responsive}
             swipeable={false}
@@ -116,130 +155,107 @@ export const Login = () => {
 
         <div class="style__auth-wrapper___2Z5D3">
           <div class="container">
-            <div class="style__wrapper___2tnRw">
-              <div>
-                <div>
-                  <div>
-                    <span class="style__main-heading___3cYBw">Sign Up</span>
-                  </div>
-                  <div class="style__explanation-wrapper___2Uqb6">
-                    <span class="style__text___2naEQ">
-                      <span>
-                        Please enter your Mobile number to receive One Time
-                        Password (OTP)
-                      </span>
-                    </span>
-                  </div>
-                </div>
-                <div>
-                  <div class="style__mb___11Y7p">
-                    <div class="style__wrapper___EMT3C style__input-error___3piwq">
-                      <label class="style__input-label___1kYYX">
-                        Enter Mobile Number
-                      </label>
-                      <div class="style__input-wrapper___3kd0w">
-                        <input class="style__input___3NmkT" />
-                      </div>
-                    </div>
-                    <div class="style__inline-error-wrapper___1i2-5 style__color-error___qUdd8">
-                      <span></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="style__health-pro-wrapper___2nnQY">
-                  <div class="style__checkbox-wrapper___1Ffh0">
-                    <svg
-                      width="16px"
-                      height="16px"
-                      viewBox="0 0 16 16"
-                      version="1.1"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g
-                        id="v2-Login"
-                        stroke="none"
-                        stroke-width="1"
-                        fill="none"
-                        fill-rule="evenodd"
-                      >
-                        <g
-                          id="Material/Light/Unchecked"
-                          transform="translate(-4.000000, -4.000000)"
-                          fill="#E0E0E0"
+            <h1 style={{ fontSize: "20px", color: "black" }}>
+              Signup Your Page
+            </h1>
+
+            <Box
+              rounded={"lg"}
+              bg={useColorModeValue("white", "gray.700")}
+              // boxShadow={"lg"}
+              p={8}
+              h={"auto"}
+              // spacing={4}
+            >
+              <Stack>
+                <form onSubmit={handleclick}>
+                  <HStack spacing={8}>
+                    <Box spacing={8}>
+                      <FormControl id="lastName" marginBottom={"20px"}>
+                        <FormLabel>First Name</FormLabel>
+                        <Input type="text" placeholder="enter first name" />
+                      </FormControl>
+                    </Box>
+                    <Box>
+                      <FormControl id="lastName" marginBottom={"20px"}>
+                        <FormLabel>Last Name</FormLabel>
+                        <Input type="text" placeholder="enter last name" />
+                      </FormControl>
+                    </Box>
+                  </HStack>
+                  <FormControl id="lastName" marginBottom={"20px"}>
+                    <FormLabel>Email</FormLabel>
+                    <Input type="text" placeholder="enter your email" />
+                  </FormControl>
+                  <FormControl id="password" marginBottom={"20px"}>
+                    <FormLabel>Password</FormLabel>
+                    <InputGroup>
+                      <Input
+                        type={showPassword ? "text" : "password"}
+                        value={password}
+                        onChange={(e) => setpassword(e.target.value)}
+                      />
+                      <InputRightElement h={"full"}>
+                        <Button
+                          variant={"ghost"}
+                          onClick={() =>
+                            setShowPassword((showPassword) => !showPassword)
+                          }
                         >
-                          <path
-                            d="M18.2222222,5.77777778 L18.2222222,18.2222222 L5.77777778,18.2222222 L5.77777778,5.77777778 L18.2222222,5.77777778 L18.2222222,5.77777778 Z M18.2222222,4 L5.77777778,4 C4.8,4 4,4.8 4,5.77777778 L4,18.2222222 C4,19.2 4.8,20 5.77777778,20 L18.2222222,20 C19.2,20 20,19.2 20,18.2222222 L20,5.77777778 C20,4.8 19.2,4 18.2222222,4 L18.2222222,4 L18.2222222,4 Z"
-                            id="Shape"
-                          ></path>
-                        </g>
-                      </g>
-                    </svg>
-                  </div>
-                  <div>
-                    <span class="style__text___2LyDl">
-                      Are you a healthcare professional?
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div>
-                  <a
-                    class="button-text"
-                    href=" "
+                          {showPassword ? <ViewIcon /> : <ViewOffIcon />}
+                        </Button>
+                      </InputRightElement>
+                    </InputGroup>
+                  </FormControl>
+                  <div
                     style={{
-                      backgroundaColor: "rgb(255, 111, 97)",
-                      color: "rgb(255, 255, 255)",
-                      height: "40px",
-                      padding: "0px 16px",
-                      textDecoration: "none",
-                      display: "flex",
-                      fontWeight: "700",
-                      fontSize: "16px",
-                      borderRadius: "4px",
-                      zIndex: "100",
-                      cursor: "pointer",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      border: "1px solid rgb(255, 111, 97)",
+                      textAlign: "left",
+                      color: "red",
+                      marginBottom: "20px",
                     }}
                   >
-                    <span style={{display: "inlineBlock"}}>CONTINUE</span>
-                  </a>
-                </div>
-                <div class="style__bottom-content___3nH4c">
-                  <div>
-                    <span class="style__text___2LyDl style__text-larger___1wRQq style__d-f___2D3f8">
-                      <span>
-                        <span>Have an account? </span>
-                        <span class="style__link___2N8KX">Login</span>
-                        <span>
-                          <p>or</p>
-                        <GoogleButton onClick={handle} />
-                        </span>
-                        <span><Link to={"/"}>Home</Link></span>
-                      </span>
-                    </span>
+                    {message}
                   </div>
-                  <div class="style__text___2LyDl style__text-lighter___1joQy style__tnc-wrapper___vu_Kh">
-                    <div style={{ textAlign: "center" }}>
-                      By signing up, you agree to our
-                    </div>
-                    <div>
-                      <a href=" ">
-                        <span class="style__tnc___2iH_i">
-                          Terms and Conditions
-                        </span>
-                      </a>{" "}
-                      &amp;{" "}
-                      <a href=" ">
-                        <span class="style__tnc___2iH_i">Privacy Policy</span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+                  <Stack spacing={4} pt={2} align={"center"}>
+                    <Button
+                      loadingText="Submitting"
+                      size="lg"
+                      bg={"blue.400"}
+                      color={"white"}
+                      _hover={{
+                        bg: "blue.500",
+                      }}
+                      width={"300px"}
+                      type="submit"
+                    >
+                      Sign up
+                    </Button>
+                  </Stack>
+                </form>
+                <Text align={"center"}>OR</Text>
+
+                <Stack spacing={10} pt={2} align={"center"}>
+                  <GoogleButton
+                    loadingText="Submitting"
+                    size="lg"
+                    bg={"blue.400"}
+                    color={"white"}
+                    _hover={{
+                      bg: "blue.500",
+                    }}
+                    onClick={handle}
+                  ></GoogleButton>
+                </Stack>
+                <Stack>
+                  <Text align={"center"}>
+                    Already a user?{" "}
+                    <Link color={"blue.400"} to={"/login"}>
+                      Login
+                    </Link>
+                  </Text>
+                </Stack>
+              </Stack>
+            </Box>
           </div>
         </div>
       </div>

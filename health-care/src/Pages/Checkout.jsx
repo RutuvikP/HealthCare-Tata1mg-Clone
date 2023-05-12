@@ -69,6 +69,13 @@ const Checkout = () => {
 
   let { total } = useSelector((state) => state.cartReducer);
 
+
+  const totalcartamout = () => {
+    let rs =Math.ceil(total - total*0.1)
+    return rs
+
+  }
+
   return (
     <>
       <Box height={"auto"} bg={"#F3F7FB"}>
@@ -541,7 +548,7 @@ const Checkout = () => {
                 display={"flex"}
               >
                 <Text> MRP Total</Text>
-                <Text>Rs {total}</Text>
+                <Text> {total} ₹</Text>
               </Box>
               <Box
                 fontSize={"sm"}
@@ -550,7 +557,7 @@ const Checkout = () => {
                 display={"flex"}
               >
                 <Text> Nedmeds Discount</Text>
-                <Text>-Rs 75.00</Text>
+                <Text>-10%</Text>
               </Box>
               <Box
                 fontSize={"sm"}
@@ -560,7 +567,7 @@ const Checkout = () => {
                 display={"flex"}
               >
                 <Text>Total Amount*</Text>
-                <Text>Rs {total-75}</Text>
+                <Text> {totalcartamout()} ₹</Text>
               </Box>
               <Box
                 bg={"#F3F8EC"}
@@ -572,7 +579,7 @@ const Checkout = () => {
                 display={"flex"}
               >
                 <Text pl={4} color={"green"}>
-                  TOTAL SAVINGS Rs.75
+                  TOTAL SAVINGS {total - totalcartamout()} ₹
                 </Text>
               </Box>
 
@@ -586,7 +593,7 @@ const Checkout = () => {
               >
                 <Box>
                   <Text fontSize={"xs"}>TOTAL AMOUNT </Text>
-                  <Text fontSize={"larger"}>Rs {total-75}</Text>
+                  <Text fontSize={"larger"}>{totalcartamout()} ₹</Text>
                 </Box>
 
                 <Box>

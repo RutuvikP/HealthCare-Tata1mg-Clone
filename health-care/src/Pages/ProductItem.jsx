@@ -5,9 +5,7 @@ import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import axios from "axios";
 function ProductItem({ ...el }) {
-  // useEffect(() => {
-  //   console.log(id);
-  // });
+ 
   const toast = useToast();
   const handleClick = (el) => {
     toast({
@@ -18,6 +16,8 @@ function ProductItem({ ...el }) {
       isClosable: true,
       position: "top",
     });
+
+  
     const newObj = { ...el, ["quantity"]: 1 };
     axios
       .post(`https://wild-pink-slug-sock.cyclic.app/cart`, newObj)
@@ -32,13 +32,14 @@ function ProductItem({ ...el }) {
   return (
     <Box
       display={"grid"}
-      gap={"5"}
+      gap={"1"}
       p={4}
-      boxShadow= 'rgba(0, 0, 0, 0.24) 0px 3px 8px'
+      boxShadow="rgba(0, 0, 0, 0.24) 0px 0px 2px"
+    
     >
       <Link to={`/product/${el.id}`}>
         <Box>
-          <Box h={"150px"} display="grid" alignItems={"center"}>
+          <Box h={"auto"} display="grid" alignItems={"center"} overflow={"hidden"}  >
             <img style={{ margin: "auto" }} src={el.img} alt="product_image" />
           </Box>
           <Box>
@@ -70,7 +71,7 @@ function ProductItem({ ...el }) {
           </Box>
         </Box>
       </Link>
-      <Button onClick={() => handleClick(el)} bg={"green.200"} color="cyan.900">
+      <Button onClick={() => handleClick(el)} bg={"green.400"} color="cyan.900">
         Add to cart
       </Button>
     </Box>
