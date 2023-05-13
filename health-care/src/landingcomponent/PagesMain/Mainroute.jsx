@@ -14,11 +14,14 @@ import AddProductPage from "../../Pages/AdminPages/AddProductPage"
 
 import {Cart} from "../../Pages/Cart";
 import Checkout from "../../Pages/Checkout";
-import { Login } from "../Login";
+
 import { Protect } from "./authfolderrr/Protect";
 import Thankyou from "../../Pages/Thankyou";
 import AllProducts from "../../Pages/AdminPages/AllProducts";
 import AdminUserPage from "../../Pages/AdminPages/AdminUserPage";
+import { Signup } from "../Signup";
+import LoginPage from "../../formvalidation/Login";
+import PrivateRoute from "../../formvalidation/Privateroute";
 
 
 export const Mainroute = () => {
@@ -36,28 +39,46 @@ export const Mainroute = () => {
         <Route path="/adminproductlist" element={<AdminProductList />}></Route>
         <Route path="/addproduct" element={<AddProductPage />}></Route>
         <Route path="/edit/:id" element={<AdminEditProduct />}></Route>
-        <Route path="/login" element={<Login />}></Route>
-       
+        <Route path="/login" element={<LoginPage />}></Route>
+        <Route path="/signup" element={<Signup/>}></Route>
         <Route
           path="/cart"
           element={
-            
+            <PrivateRoute>
+              {" "}
               <Cart />
-           
+            </PrivateRoute>
           }
         ></Route>
         ;
         <Route
           path="/checkout/payment-information"
           element={
-           
+            <PrivateRoute>
+              {" "}
               <Checkout />
-            
+            </PrivateRoute>
           }
         ></Route>
-        <Route path="/thankyou" element={<Thankyou />}></Route>
+        <Route
+          path="/thankyou"
+          element={
+            <PrivateRoute>
+              {" "}
+              <Thankyou />
+            </PrivateRoute>
+          }
+        ></Route>
         <Route path="/allproduct" element={<AllProducts />}></Route>
-        <Route path="/adminuser" element={<AdminUserPage />}></Route>
+        <Route
+          path="/adminuser"
+          element={
+            <PrivateRoute>
+              {" "}
+              <AdminUserPage />
+            </PrivateRoute>
+          }
+        ></Route>
       </Routes>
     </div>
   );

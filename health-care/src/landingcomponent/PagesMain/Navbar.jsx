@@ -27,20 +27,23 @@ import {
 import hlcarelogo from './images/logo.png';
 // import { useNavigate } from 'react-router-dom'
 import { UseAuth } from "./authfolderrr/Authcontext";
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { logout } from '../../redux/authReducer/actions';
 
 export default function Navbar() {
  
-    const { logout, user } = UseAuth();
-    const handlenav = async () => {
-      try {
-        await logout();
-      } catch (error) {
-        console.log("nma");
-      }
-  };
+  // const { logout, user } = UseAuth();
+   const dispatch = useDispatch();
+  //   const handlenav = async () => {
+  //     try {
+  //       await logout();
+  //     } catch (error) {
+  //       console.log("nma");
+  //     }
+  // };
    const { isOpen, onToggle } = useDisclosure();
   // const navigate=useNavigate();
+   const state = useSelector((store) => store.authReducer);
   const cart=useSelector((store)=>store.cartReducer.cart)
   return (
     <Box mb={"10px"}>
@@ -110,7 +113,16 @@ export default function Navbar() {
             color={"white"}
             href={"/cart"}
           >
-            Cart 🛒 {cart.length!==0?<Badge fontWeight={'bold'} colorScheme={'orange'} borderRadius={'50%'}>{cart.length}</Badge>:null}
+            Cart 🛒{" "}
+            {cart.length !== 0 ? (
+              <Badge
+                fontWeight={"bold"}
+                colorScheme={"orange"}
+                borderRadius={"50%"}
+              >
+                {cart.length}
+              </Badge>
+            ) : null}
           </Button>
 
           <Flex>
@@ -120,7 +132,9 @@ export default function Navbar() {
               color={useColorModeValue("white", "white")}
             >
               {" "}
-              {user?.displayName}
+              {state.token != undefined
+                ? state.firstname + " " + state.lastname
+                : ""}
             </Text>
 
             <Box
@@ -132,9 +146,8 @@ export default function Navbar() {
               m={7}
               bg="tomato"
               ml={3}
-             
             >
-              {user && (
+              {state.msg == "login successfull" && (
                 <Image
                   w={"60px"}
                   src="https://cdn.pixabay.com/photo/2015/03/04/22/35/avatar-659652_1280.png"
@@ -151,8 +164,8 @@ export default function Navbar() {
             textAlign={useBreakpointValue({ base: "center" })}
             mt={5}
           >
-            {user?.displayName ? (
-              <Button mt={5} onClick={handlenav}>
+            {state.msg == "login successfull" ? (
+              <Button mt={5} onClick={() => dispatch(logout())}>
                 logout
               </Button>
             ) : (
@@ -165,7 +178,7 @@ export default function Navbar() {
                 href={"/login"}
                 mt={5}
               >
-                Log In | Sign up
+               Login | Signup
               </Button>
             )}
           </Box>
