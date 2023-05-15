@@ -15,7 +15,7 @@ import AddProductPage from "../../Pages/AdminPages/AddProductPage"
 import {Cart} from "../../Pages/Cart";
 import Checkout from "../../Pages/Checkout";
 
-import { Protect } from "./authfolderrr/Protect";
+// import { Protect } from "./authfolderrr/Protect";
 import Thankyou from "../../Pages/Thankyou";
 import AllProducts from "../../Pages/AdminPages/AllProducts";
 import AdminUserPage from "../../Pages/AdminPages/AdminUserPage";
@@ -54,29 +54,29 @@ export const Mainroute = () => {
         <Route
           path="/checkout/payment-information"
           element={
-            <PrivateRoute>
-              {" "}
-              <Checkout />
-            </PrivateRoute>
+           
+             
+              <Checkout/>
+           
           }
         ></Route>
         <Route
           path="/thankyou"
           element={
-            <PrivateRoute>
-              {" "}
+           
+             
               <Thankyou />
-            </PrivateRoute>
+            
           }
         ></Route>
         <Route path="/allproduct" element={<AllProducts />}></Route>
         <Route
           path="/adminuser"
           element={
-            <PrivateRoute>
-              {" "}
+           
+             
               <AdminUserPage />
-            </PrivateRoute>
+           
           }
         ></Route>
       </Routes>

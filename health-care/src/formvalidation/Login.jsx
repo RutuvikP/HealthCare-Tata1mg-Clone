@@ -37,42 +37,17 @@ export default function LoginPage() {
     const details = { email, password };
     dispatch(login(details)).then((res) => {
      
-      if (res === "Incorrect password ") {
-        toast({
-          title: "Incorrect Password.",
-          status: "error",
-          duration: 4000,
-          isClosable: true,
-        });
-      } else if (state.msg=="wrong") {
-        toast({
-          title: "Not Match",
-          status: "error",
-          
-          duration: 4000,
-          isClosable: true,
-        });
-      }
-      else if (state.msg === "") {
-        toast({
-          title: "Not Match",
-          status: "error",
-          
-          duration: 4000,
-          isClosable: true,
-        });
-      }
+     
+     toast({
+       title: "Login Sucessfully.",
+       description: "lets visit every pages..",
+       status: "success",
+       duration: 4000,
+       position: "top",
+       isClosable: true,
+     });
       
-      else if (state.lastname != undefined||state.lastname !="") {
-        toast({
-          title: "Login Sucessfully.",
-          description: "lets visit every pages..",
-          status: "success",
-          duration: 4000,
-          position: "top",
-          isClosable: true,
-        });
-      }
+       
     });
   
     
