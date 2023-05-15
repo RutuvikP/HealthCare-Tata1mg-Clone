@@ -33,7 +33,7 @@ export const login = (data) => (dispatch) => {
     })
     .catch((err) => {
       dispatch(loginFailAction());
-      return err.response.data;
+      return err.data;
     });
 }
   

@@ -36,16 +36,29 @@ export default function LoginPage() {
   const handleLogin = () => {
     const details = { email, password };
     dispatch(login(details)).then((res) => {
-     
-     
-     toast({
-       title: "Login Sucessfully.",
-       description: "lets visit every pages..",
-       status: "success",
-       duration: 4000,
-       position: "top",
-       isClosable: true,
-     });
+   
+      if (res.msg == "login successfull") {
+        // console.log("error");
+        toast({
+          title: "Login Sucessfully.",
+          description: "lets visit every pages..",
+          status: "success",
+          duration: 4000,
+          position: "top",
+          isClosable: true,
+        });
+      } else {
+        
+        toast({
+          title: "check once please .",
+          description: "can't visit every pages..",
+          status: "error",
+          duration: 4000,
+          position: "top",
+          isClosable: true,
+        });
+      }
+    
       
        
     });

@@ -13,7 +13,7 @@ email: "",
   token: "",
 msg:"",
 isLoading: false,
-isError: true,
+isError: false,
 };
 
 const reducer = (state = initState, { type, payload }) => {
