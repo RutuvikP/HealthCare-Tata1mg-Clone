@@ -8,11 +8,16 @@ import { ChakraProvider } from '@chakra-ui/react';
 import { Provider } from 'react-redux'
 import { store } from './redux/store';
 import { Authcontextprovider } from './landingcomponent/PagesMain/authfolderrr/Authcontext';
-
+import breakpointss from "./breakponits/breakpoints";
+import { extendTheme } from "@chakra-ui/react";
 const root = ReactDOM.createRoot(document.getElementById('root'));
+// const colortheme = colorThemes();
+
+const theme = extendTheme({breakpoints: { ...breakpointss } });
+
 root.render(
   <Provider store={store}>
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
       <BrowserRouter>
         <Authcontextprovider>
           {" "}

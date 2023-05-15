@@ -3,7 +3,7 @@ import {
   images,
   secondslide,
   productcombo,
-  popularCategories,
+  
   healthcareDevices,
   babycare,
   datata2,
@@ -16,31 +16,52 @@ import {
   datadat1,
   lastgfd9,
 } from "./Mycollectionsdata";
-// import { Image } from "semantic-ui-react";
-// import  from "../../Pages/Homelan.css";
+
 import "./Homecarosal.css"
 
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
-    items:6,
-    paritialVisibilityGutter:35,
+    items: 6,
+    paritialVisibilityGutter: 35,
   },
   tablet: {
-    breakpoint: { max: 1024, min:600},
-    items:4.5,
-    paritialVisibilityGutter:12,
+    breakpoint: { max: 1024, min: 600 },
+    items: 4.5,
+    paritialVisibilityGutter: 12,
   },
   mobile: {
-    breakpoint: { max:600, min: 0 },
-    items:3,
-    paritialVisibilityGutter:10,
+    breakpoint: { max: 600, min: 500 },
+    items: 3,
+    paritialVisibilityGutter: 0,
+  },
+  mobile2: {
+    breakpoint: { max:500, min:414 },
+    items: 2,
+    paritialVisibilityGutter: 0,
+  },
+  mobile6: {
+    breakpoint: { max: 414, min:290 },
+    items: 2,
+    paritialVisibilityGutter:0,
+  },
+  // mobile5: {
+  //   breakpoint: { max: 300, min: 260 },
+  //   items: 2,
+  //   paritialVisibilityGutter: 0,
+  // },
+  mobile3: {
+    breakpoint: { max: 2, min: 100 },
+    items: 1,
+    paritialVisibilityGutter: 0,
+  },
+  mobile4: {
+    breakpoint: { max: 100, min: 0 },
+    items: 1,
+    paritialVisibilityGutter: 0,
   },
 };
 
-
-// Because this is an inframe, so the SSR mode doesn't not do well here.
-// It will work on real devices.
 const HomeCarosal = ({ deviceType }) => {
   return (
     <div>
@@ -59,7 +80,8 @@ const HomeCarosal = ({ deviceType }) => {
                 class="slick-slide slick-active slick-current slice-hover"
                 tabindex="-1"
                 aria-hidden="false"
-                style={{ outline: "none", width: "190px" }}
+                                style={{outline: "none", width: "190px",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center", margin:"auto",alignContent:"center",}}
+
               >
                 <div>
                   <div
@@ -133,7 +155,8 @@ const HomeCarosal = ({ deviceType }) => {
                 class="slick-slide slick-active slick-current slice-hover"
                 tabindex="-1"
                 aria-hidden="false"
-                style={{ outline: "none", width: "190px" }}
+                                style={{outline: "none", width: "190px",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"}}
+
               >
                 <div>
                   <div
@@ -205,7 +228,14 @@ const HomeCarosal = ({ deviceType }) => {
                 class="slick-slide slick-active slick-current"
                 tabindex="-1"
                 aria-hidden="false"
-                style={{ outline: "none", width: "190px" }}
+                style={{
+                  outline: "none",
+                  width: "190px",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
               >
                 <div>
                   <div
@@ -257,9 +287,19 @@ const HomeCarosal = ({ deviceType }) => {
                           {el.combopack}
                         </div>
                         <div class="style__eta___1JNVM"></div>
-                        <div class="style__price-container___3DXin">
+                        <div
+                          class="style__price-container___3DXin"
+                          style={{
+                          
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
+                          }}
+                        >
                           <div>
-                            <div>
+                            <div
+                            
+                            >
                               <span class="style__mrp-tag___3T8Mr">MRP</span>
                               <span class="style__strike-price___3Ag3J">
                                 {el.mrpoff}
@@ -309,9 +349,18 @@ const HomeCarosal = ({ deviceType }) => {
                 class="slick-slide slick-active slick-current slice-hover"
                 tabindex="-1"
                 aria-hidden="false"
-                style={{ outline: "none", width: "190px" }}
+                style={{
+                  outline: "none",
+                  width: "190px",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
               >
-                <div>
+                <div
+                 
+                >
                   <div
                     class="card-slide"
                     data-index="0"
@@ -382,7 +431,8 @@ const HomeCarosal = ({ deviceType }) => {
                 class="slick-slide slick-active slick-current slice-hover"
                 tabindex="-1"
                 aria-hidden="false"
-                style={{ outline: "none", width: "190px" }}
+                                style={{outline: "none", width: "190px",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"}}
+
               >
                 <div>
                   <div
@@ -459,7 +509,8 @@ const HomeCarosal = ({ deviceType }) => {
                 class="slick-slide slick-active slick-current slice-hover"
                 tabindex="-1"
                 aria-hidden="false"
-                style={{ outline: "none", width: "190px" }}
+                                style={{outline: "none", width: "190px",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"}}
+
               >
                 <div>
                   <div
@@ -531,7 +582,14 @@ const HomeCarosal = ({ deviceType }) => {
                 class="slick-slide slick-active slick-current"
                 tabindex="-1"
                 aria-hidden="false"
-                style={{ outline: "none", width: "190px" }}
+                style={{
+                  outline: "none",
+                  width: "190px",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
               >
                 <div>
                   <div
@@ -585,7 +643,14 @@ const HomeCarosal = ({ deviceType }) => {
                         <div class="style__eta___1JNVM"></div>
                         <div class="style__price-container___3DXin">
                           <div>
-                            <div>
+                            <div
+                              style={{
+                               
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
+                              }}
+                            >
                               <span class="style__mrp-tag___3T8Mr">MRP</span>
                               <span class="style__strike-price___3Ag3J">
                                 {el.mrpoff}
@@ -594,7 +659,17 @@ const HomeCarosal = ({ deviceType }) => {
                                 {el.offf}
                               </span>
                             </div>
-                            <div class="style__price___196ew">{el.mrp}</div>
+                            <div
+                              class="style__price___196ew"
+                              style={{
+                               
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
+                              }}
+                            >
+                              {el.mrp}
+                            </div>
                           </div>
                         </div>
                       </a>
@@ -635,7 +710,14 @@ const HomeCarosal = ({ deviceType }) => {
                 class="slick-slide slick-active slick-current"
                 tabindex="-1"
                 aria-hidden="false"
-                style={{ outline: "none", width: "190px" }}
+                style={{
+                  outline: "none",
+                  width: "190px",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
               >
                 <div>
                   <div
@@ -689,7 +771,14 @@ const HomeCarosal = ({ deviceType }) => {
                         <div class="style__eta___1JNVM"></div>
                         <div class="style__price-container___3DXin">
                           <div>
-                            <div>
+                            <div
+                              style={{
+                               
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
+                              }}
+                            >
                               <span class="style__mrp-tag___3T8Mr">MRP</span>
                               <span class="style__strike-price___3Ag3J">
                                 {el.mrpoff}
@@ -698,7 +787,17 @@ const HomeCarosal = ({ deviceType }) => {
                                 {el.offf}
                               </span>
                             </div>
-                            <div class="style__price___196ew">{el.mrp}</div>
+                            <div
+                              class="style__price___196ew"
+                              style={{
+                               
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
+                              }}
+                            >
+                              {el.mrp}
+                            </div>
                           </div>
                         </div>
                       </a>
@@ -739,7 +838,14 @@ const HomeCarosal = ({ deviceType }) => {
                 class="slick-slide slick-active slick-current"
                 tabindex="-1"
                 aria-hidden="false"
-                style={{ outline: "none", width: "190px" }}
+                style={{
+                  outline: "none",
+                  width: "190px",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
               >
                 <div>
                   <div
@@ -793,7 +899,14 @@ const HomeCarosal = ({ deviceType }) => {
                         <div class="style__eta___1JNVM"></div>
                         <div class="style__price-container___3DXin">
                           <div>
-                            <div>
+                            <div
+                              style={{
+                               
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
+                              }}
+                            >
                               <span class="style__mrp-tag___3T8Mr">MRP</span>
                               <span class="style__strike-price___3Ag3J">
                                 {el.mrpoff}
@@ -802,7 +915,17 @@ const HomeCarosal = ({ deviceType }) => {
                                 {el.offf}
                               </span>
                             </div>
-                            <div class="style__price___196ew">{el.mrp}</div>
+                            <div
+                              class="style__price___196ew"
+                              style={{
+                               
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
+                              }}
+                            >
+                              {el.mrp}
+                            </div>
                           </div>
                         </div>
                       </a>
@@ -843,7 +966,14 @@ const HomeCarosal = ({ deviceType }) => {
                 class="slick-slide slick-active slick-current"
                 tabindex="-1"
                 aria-hidden="false"
-                style={{ outline: "none", width: "190px" }}
+                style={{
+                  outline: "none",
+                  width: "190px",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
               >
                 <div>
                   <div
@@ -897,7 +1027,14 @@ const HomeCarosal = ({ deviceType }) => {
                         <div class="style__eta___1JNVM"></div>
                         <div class="style__price-container___3DXin">
                           <div>
-                            <div>
+                            <div
+                              style={{
+                               
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
+                              }}
+                            >
                               <span class="style__mrp-tag___3T8Mr">MRP</span>
                               <span class="style__strike-price___3Ag3J">
                                 {el.mrpoff}
@@ -906,7 +1043,17 @@ const HomeCarosal = ({ deviceType }) => {
                                 {el.offf}
                               </span>
                             </div>
-                            <div class="style__price___196ew">{el.mrp}</div>
+                            <div
+                              class="style__price___196ew"
+                              style={{
+                               
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
+                              }}
+                            >
+                              {el.mrp}
+                            </div>
                           </div>
                         </div>
                       </a>
@@ -947,7 +1094,14 @@ const HomeCarosal = ({ deviceType }) => {
                 class="slick-slide slick-active slick-current"
                 tabindex="-1"
                 aria-hidden="false"
-                style={{ outline: "none", width: "190px" }}
+                style={{
+                  outline: "none",
+                  width: "190px",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
               >
                 <div>
                   <div
@@ -1001,7 +1155,14 @@ const HomeCarosal = ({ deviceType }) => {
                         <div class="style__eta___1JNVM"></div>
                         <div class="style__price-container___3DXin">
                           <div>
-                            <div>
+                            <div
+                              style={{
+                               
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
+                              }}
+                            >
                               <span class="style__mrp-tag___3T8Mr">MRP</span>
                               <span class="style__strike-price___3Ag3J">
                                 {el.mrpoff}
@@ -1010,7 +1171,17 @@ const HomeCarosal = ({ deviceType }) => {
                                 {el.offf}
                               </span>
                             </div>
-                            <div class="style__price___196ew">{el.mrp}</div>
+                            <div
+                              class="style__price___196ew"
+                              style={{
+                               
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
+                              }}
+                            >
+                              {el.mrp}
+                            </div>
                           </div>
                         </div>
                       </a>
@@ -1051,7 +1222,14 @@ const HomeCarosal = ({ deviceType }) => {
                 class="slick-slide slick-active slick-current"
                 tabindex="-1"
                 aria-hidden="false"
-                style={{ outline: "none", width: "190px" }}
+                style={{
+                  outline: "none",
+                  width: "190px",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
               >
                 <div>
                   <div
@@ -1105,7 +1283,14 @@ const HomeCarosal = ({ deviceType }) => {
                         <div class="style__eta___1JNVM"></div>
                         <div class="style__price-container___3DXin">
                           <div>
-                            <div>
+                            <div
+                              style={{
+                               
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
+                              }}
+                            >
                               <span class="style__mrp-tag___3T8Mr">MRP</span>
                               <span class="style__strike-price___3Ag3J">
                                 {el.mrpoff}
@@ -1114,7 +1299,17 @@ const HomeCarosal = ({ deviceType }) => {
                                 {el.offf}
                               </span>
                             </div>
-                            <div class="style__price___196ew">{el.mrp}</div>
+                            <div
+                              class="style__price___196ew"
+                              style={{
+                               
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
+                              }}
+                            >
+                              {el.mrp}
+                            </div>
                           </div>
                         </div>
                       </a>
@@ -1155,7 +1350,14 @@ const HomeCarosal = ({ deviceType }) => {
                 class="slick-slide slick-active slick-current"
                 tabindex="-1"
                 aria-hidden="false"
-                style={{ outline: "none", width: "190px" }}
+                style={{
+                  outline: "none",
+                  width: "190px",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
               >
                 <div>
                   <div
@@ -1209,7 +1411,14 @@ const HomeCarosal = ({ deviceType }) => {
                         <div class="style__eta___1JNVM"></div>
                         <div class="style__price-container___3DXin">
                           <div>
-                            <div>
+                            <div
+                              style={{
+                               
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
+                              }}
+                            >
                               <span class="style__mrp-tag___3T8Mr">MRP</span>
                               <span class="style__strike-price___3Ag3J">
                                 {el.mrpoff}
@@ -1218,7 +1427,17 @@ const HomeCarosal = ({ deviceType }) => {
                                 {el.offf}
                               </span>
                             </div>
-                            <div class="style__price___196ew">{el.mrp}</div>
+                            <div
+                              class="style__price___196ew"
+                              style={{
+                               
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
+                              }}
+                            >
+                              {el.mrp}
+                            </div>
                           </div>
                         </div>
                       </a>
@@ -1259,7 +1478,14 @@ const HomeCarosal = ({ deviceType }) => {
                 class="slick-slide slick-active slick-current"
                 tabindex="-1"
                 aria-hidden="false"
-                style={{ outline: "none", width: "190px" }}
+                style={{
+                  outline: "none",
+                  width: "190px",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
               >
                 <div>
                   <div
@@ -1313,7 +1539,14 @@ const HomeCarosal = ({ deviceType }) => {
                         <div class="style__eta___1JNVM"></div>
                         <div class="style__price-container___3DXin">
                           <div>
-                            <div>
+                            <div
+                              style={{
+                               
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
+                              }}
+                            >
                               <span class="style__mrp-tag___3T8Mr">MRP</span>
                               <span class="style__strike-price___3Ag3J">
                                 {el.mrpoff}
@@ -1322,7 +1555,17 @@ const HomeCarosal = ({ deviceType }) => {
                                 {el.offf}
                               </span>
                             </div>
-                            <div class="style__price___196ew">{el.mrp}</div>
+                            <div
+                              class="style__price___196ew"
+                              style={{
+                               
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
+                              }}
+                            >
+                              {el.mrp}
+                            </div>
                           </div>
                         </div>
                       </a>
@@ -1363,7 +1606,14 @@ const HomeCarosal = ({ deviceType }) => {
                 class="slick-slide slick-active slick-current"
                 tabindex="-1"
                 aria-hidden="false"
-                style={{ outline: "none", width: "190px" }}
+                style={{
+                  outline: "none",
+                  width: "190px",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
               >
                 <div>
                   <div
@@ -1417,7 +1667,14 @@ const HomeCarosal = ({ deviceType }) => {
                         <div class="style__eta___1JNVM"></div>
                         <div class="style__price-container___3DXin">
                           <div>
-                            <div>
+                            <div
+                              style={{
+                               
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
+                              }}
+                            >
                               <span class="style__mrp-tag___3T8Mr">MRP</span>
                               <span class="style__strike-price___3Ag3J">
                                 {el.mrpoff}
@@ -1426,7 +1683,17 @@ const HomeCarosal = ({ deviceType }) => {
                                 {el.offf}
                               </span>
                             </div>
-                            <div class="style__price___196ew">{el.mrp}</div>
+                            <div
+                              class="style__price___196ew"
+                              style={{
+                               
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
+                              }}
+                            >
+                              {el.mrp}
+                            </div>
                           </div>
                         </div>
                       </a>
@@ -1467,7 +1734,14 @@ const HomeCarosal = ({ deviceType }) => {
                 class="slick-slide slick-active slick-current"
                 tabindex="-1"
                 aria-hidden="false"
-                style={{ outline: "none", width: "190px" }}
+                style={{
+                  outline: "none",
+                  width: "190px",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
               >
                 <div>
                   <div
@@ -1521,7 +1795,14 @@ const HomeCarosal = ({ deviceType }) => {
                         <div class="style__eta___1JNVM"></div>
                         <div class="style__price-container___3DXin">
                           <div>
-                            <div>
+                            <div
+                              style={{
+                               
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
+                              }}
+                            >
                               <span class="style__mrp-tag___3T8Mr">MRP</span>
                               <span class="style__strike-price___3Ag3J">
                                 {el.mrpoff}
@@ -1530,7 +1811,17 @@ const HomeCarosal = ({ deviceType }) => {
                                 {el.offf}
                               </span>
                             </div>
-                            <div class="style__price___196ew">{el.mrp}</div>
+                            <div
+                              class="style__price___196ew"
+                              style={{
+                               
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
+                              }}
+                            >
+                              {el.mrp}
+                            </div>
                           </div>
                         </div>
                       </a>
@@ -1571,7 +1862,14 @@ const HomeCarosal = ({ deviceType }) => {
                 class="slick-slide slick-active slick-current"
                 tabindex="-1"
                 aria-hidden="false"
-                style={{ outline: "none", width: "190px" }}
+                style={{
+                  outline: "none",
+                  width: "190px",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
               >
                 <div>
                   <div
@@ -1625,7 +1923,14 @@ const HomeCarosal = ({ deviceType }) => {
                         <div class="style__eta___1JNVM"></div>
                         <div class="style__price-container___3DXin">
                           <div>
-                            <div>
+                            <div
+                              style={{
+                               
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
+                              }}
+                            >
                               <span class="style__mrp-tag___3T8Mr">MRP</span>
                               <span class="style__strike-price___3Ag3J">
                                 {el.mrpoff}
@@ -1634,7 +1939,17 @@ const HomeCarosal = ({ deviceType }) => {
                                 {el.offf}
                               </span>
                             </div>
-                            <div class="style__price___196ew">{el.mrp}</div>
+                            <div
+                              class="style__price___196ew"
+                              style={{
+                               
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
+                              }}
+                            >
+                              {el.mrp}
+                            </div>
                           </div>
                         </div>
                       </a>
@@ -1675,7 +1990,14 @@ const HomeCarosal = ({ deviceType }) => {
                 class="slick-slide slick-active slick-current"
                 tabindex="-1"
                 aria-hidden="false"
-                style={{ outline: "none", width: "190px" }}
+                style={{
+                  outline: "none",
+                  width: "190px",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
               >
                 <div>
                   <div
@@ -1729,7 +2051,14 @@ const HomeCarosal = ({ deviceType }) => {
                         <div class="style__eta___1JNVM"></div>
                         <div class="style__price-container___3DXin">
                           <div>
-                            <div>
+                            <div
+                              style={{
+                               
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
+                              }}
+                            >
                               <span class="style__mrp-tag___3T8Mr">MRP</span>
                               <span class="style__strike-price___3Ag3J">
                                 {el.mrpoff}
@@ -1738,7 +2067,17 @@ const HomeCarosal = ({ deviceType }) => {
                                 {el.offf}
                               </span>
                             </div>
-                            <div class="style__price___196ew">{el.mrp}</div>
+                            <div
+                              class="style__price___196ew"
+                              style={{
+                               
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
+                              }}
+                            >
+                              {el.mrp}
+                            </div>
                           </div>
                         </div>
                       </a>
@@ -1780,7 +2119,8 @@ const HomeCarosal = ({ deviceType }) => {
                 class="slick-slide slick-active slick-current slice-hover"
                 tabindex="-1"
                 aria-hidden="false"
-                style={{ outline: "none", width: "190px" }}
+                                style={{outline: "none", width: "190px",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"}}
+
               >
                 <div>
                   <div
@@ -1853,7 +2193,14 @@ const HomeCarosal = ({ deviceType }) => {
                 class="slick-slide slick-active slick-current"
                 tabindex="-1"
                 aria-hidden="false"
-                style={{ outline: "none", width: "190px" }}
+                style={{
+                  outline: "none",
+                  width: "190px",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
               >
                 <div>
                   <div
@@ -1907,7 +2254,14 @@ const HomeCarosal = ({ deviceType }) => {
                         <div class="style__eta___1JNVM"></div>
                         <div class="style__price-container___3DXin">
                           <div>
-                            <div>
+                            <div
+                              style={{
+                               
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
+                              }}
+                            >
                               <span class="style__mrp-tag___3T8Mr">MRP</span>
                               <span class="style__strike-price___3Ag3J">
                                 {el.mrpoff}
@@ -1916,7 +2270,17 @@ const HomeCarosal = ({ deviceType }) => {
                                 {el.offf}
                               </span>
                             </div>
-                            <div class="style__price___196ew">{el.mrp}</div>
+                            <div
+                              class="style__price___196ew"
+                              style={{
+                               
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
+                              }}
+                            >
+                              {el.mrp}
+                            </div>
                           </div>
                         </div>
                       </a>

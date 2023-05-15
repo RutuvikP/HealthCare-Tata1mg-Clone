@@ -21,7 +21,7 @@ export const loginFailAction = () => {
 export const login = (data) => (dispatch) => {
   dispatch(loginReqAction());
   return axios
-    .post("http://localhost:8080/users/login", data)
+    .post("https://katydid-tuxedo.cyclic.app/users/login", data)
     .then((res) => {
       console.log(res.data);
       dispatch(loginSuccessAction(res.data));
@@ -37,21 +37,7 @@ export const login = (data) => (dispatch) => {
     });
 }
   
-  // axios
-  //   .post("http://localhost:8080/users/login", data)
-  //   .then((res) => {
-  //     console.log(res.data.user);
-  //     dispatch(loginSuccessAction(res.data.user));
-  //     localStorage.setItem(
-  //       "UserDetails",
-  //       JSON.stringify({ isLoggedIn: true, ...res.data.user })
-  //     );
-  //     return res.data.user;
-  //   })
-  //   .catch((err) => {
-  //     dispatch(loginFailAction());
-  //     return err.response.data;
-  //   });}
+  
 
 export const logout = () => {
   localStorage.setItem("UserDetails", null);

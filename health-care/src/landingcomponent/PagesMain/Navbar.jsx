@@ -127,9 +127,10 @@ export default function Navbar() {
 
           <Flex>
             <Text
-              textAlign={useBreakpointValue({ base: "center", md: "left" })}
+              textAlign={useBreakpointValue({ base: "center", md: "center" })}
               fontFamily={"heading"}
               color={useColorModeValue("white", "white")}
+              margin={"auto"}
             >
               {" "}
               {state.token != undefined

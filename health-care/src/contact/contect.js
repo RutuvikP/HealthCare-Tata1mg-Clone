@@ -1,1 +1,1 @@
-export const BASE_URL = "http://localhost:8080";
+export const BASE_URL = "https://katydid-tuxedo.cyclic.app";
