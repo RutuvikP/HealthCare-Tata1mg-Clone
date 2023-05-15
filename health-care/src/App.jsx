@@ -3,7 +3,7 @@ import "./App.css";
 // import { Mainroute } from "./landingcomponent/PagesMain/Mainroute";
 // import ProductList from "./Pages/ProductList";
 import { Mainroute } from "./landingcomponent/PagesMain/Mainroute";
-import { Footer2 } from "./landingcomponent/Footer2";
+import  Footer2  from "./landingcomponent/Footer2";
 import Navbar from "./landingcomponent/PagesMain/Navbar";
 // import ProductList from "./Pages/ProductList";
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { Footer1 } from "../landingcomponent/Footer1";
+
 // import { Footer2 } from "../landingcomponent/Footer2";
 import Banner from "../landingcomponent/PagesMain/Banner";
 import HomeCarosal from "../landingcomponent/PagesMain/HomeCarosal";
@@ -54,7 +54,7 @@ export const Homelan = () => {
         <span class="style__heading___pc8n7">Shop by health concerns</span>
       </div>
       <HomeCarosal />
-      <Footer1 />
+      
     </div>
   );
 };

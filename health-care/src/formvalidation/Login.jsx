@@ -52,12 +52,24 @@ export default function LoginPage() {
           duration: 4000,
           isClosable: true,
         });
-      } else if (state.msg == "login successfull") {
+      }
+      else if (state.msg === "") {
         toast({
-          title: "Login Success.",
+          title: "Not Match",
+          status: "error",
+          
+          duration: 4000,
+          isClosable: true,
+        });
+      }
+      
+      else if (state.lastname != undefined||state.lastname !="") {
+        toast({
+          title: "Login Sucessfully.",
+          description: "lets visit every pages..",
           status: "success",
-
-          duration: 3000,
+          duration: 4000,
+          position: "top",
           isClosable: true,
         });
       }

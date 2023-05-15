@@ -5,6 +5,7 @@ import { useNavigate} from "react-router-dom";
 import { UseAuth } from "./PagesMain/authfolderrr/Authcontext";
 import emailjs from "@emailjs/browser";
 import Carousel from "react-multi-carousel";
+import { BASE_URL } from "../contact/contect";
 import {
   Flex,
   Box,
@@ -98,12 +99,9 @@ export const Signup = () => {
       console.log(error);
     }
   };
-//  let p=[]
+
   const handleclick = () => {
-    // e.preventDefault()
-     
-     // console.log(all)
-  // console.log("jdfs");
+   
      const initData = {
        firstname,
        lastname,
@@ -112,7 +110,7 @@ export const Signup = () => {
       
      };
    
-    fetch("http://localhost:8080/users/register", {
+    fetch("https://katydid-tuxedo.cyclic.app/users/register", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
