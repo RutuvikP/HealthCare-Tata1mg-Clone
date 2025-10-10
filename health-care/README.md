@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+  <h1 align="center"><-------~ Tata1mg Clone ~-------></h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+In this project we have tried to clone the functionalities of Tata1mg website. Tata1mg is a healthcare platform in India, that provides services including e-pharmacy, diagnostics etc.
 
-## Available Scripts
+### Deployed link - https://health-care-tau.vercel.app/
 
-In the project directory, you can run:
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<a href="#"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a> <a href="#"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg" alt="redux" width="40" height="40"/> </a>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Features
+### Admin Functionalities
+- Only if admin credentials are correct then only admin dashboard can be accessed
+- Add a new product to the website
+- Can edit the products properties
+- Can remove the products from the website
+### Product Page Functionalities
+- Filtering the products by brand names
+- Sorting the products by price low to high and high to low
+- Sorting and Filtering working together seamlessly
+- Pagination
+### Cart Page Functionalities
+- Can increase and decrease the quantity of product
+- Total price will also change according to product quantity
+- Can remove the product from cart
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Screenshots
+### Landing Page
+![Landing Page](https://user-images.githubusercontent.com/112895946/229422523-903c464d-80fa-4f5f-9275-2242ee3b56ac.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Product Page
+![Product Page](https://github.com/RutuvikP/chemical-rake-3857/assets/115460351/2fc81644-05ad-4a0a-a03c-1e7fd4d483bd)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Cart Page
+![Cart Page](https://github.com/RutuvikP/chemical-rake-3857/assets/115460351/262ed724-25c0-4d46-a98e-f7bcf4511219)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Admin Dashboard
+![Checkout Page](https://github.com/RutuvikP/chemical-rake-3857/assets/115460351/607d1a1a-fb26-4ca8-a1e5-8a5362760fe1)
 
-### `npm run eject`
+### Admin Products Page
+![Payment Page](https://github.com/RutuvikP/chemical-rake-3857/assets/115460351/0abf59f4-d94b-440b-86fa-0887f0a69722)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Authors
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [@RutuvikP](https://github.com/RutuvikP)
+- [@prachi913](https://github.com/prachi913)
+- [@tambeaditya101](https://github.com/tambeaditya101)
+- [@officialmanoj14](https://github.com/officialmanoj14)
+- [@Rahulaustralia](https://github.com/Rahulaustralia)
